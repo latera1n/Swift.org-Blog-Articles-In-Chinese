@@ -39,7 +39,7 @@ Swift 是由很多不同的项目所构成的，由此也提供了一个可以�
 ___—— Swift 团队___
 
 <br />
-<sub><sup>Copyright © 2016 Apple Inc. All rights reserved. Swift and the Swift logo are trademarks of Apple Inc.</sup></sub>
+<sub>Copyright © 2016 Apple Inc. All rights reserved. Swift and the Swift logo are trademarks of Apple Inc.</sub>
 
 [swift-package-manager]: https://swift.org/package-manager/
 [github-apple-homepage]: http://github.com/apple
