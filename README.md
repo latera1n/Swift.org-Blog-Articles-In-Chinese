@@ -3,7 +3,7 @@ Swift.org 博客文章中文翻译
 
 ## 博客文章
 
-* [Swift.org 博客][welcome]
+* [Swift.org 博客][welcome] (12/3/2015)
 
 [welcome]: ./2015/12/welcome.md
 
@@ -12,4 +12,4 @@ Swift.org 博客文章中文翻译
 * [本项目的 MIT 许可证/MIT License for this project][license]
 
 [original-license]: ./original-LICENSE
-[]license]: ./LICENSE
+[license]: ./LICENSE
