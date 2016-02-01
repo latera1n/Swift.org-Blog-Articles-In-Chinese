@@ -1,5 +1,6 @@
-# Swift.org-Blog-Articles-In-Chinese
-Swift.org 博客文章中文翻译
+<img style="float: left; width: 30px; height: 30px;" src="./swift-logo.png"> 
+# Swift.org 博客文章中文翻译
+Swift.org blog articles in Chinese
 
 ## 博客文章
 
