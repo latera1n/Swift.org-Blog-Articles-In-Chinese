@@ -11,5 +11,5 @@ Swift.org 博客文章中文翻译
 * [Swift.org 的 Apache 2.0 许可证/The original license from Swift.org][original-license]
 * [本项目的 MIT 许可证/MIT License for this project][license]
 
-[original-license]: ./original-LICENSE
+[original-license]: ./Swift.org-original-LICENSE
 [license]: ./LICENSE
