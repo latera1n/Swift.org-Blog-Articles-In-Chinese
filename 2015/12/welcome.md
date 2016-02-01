@@ -1,5 +1,7 @@
 # Swift.org 博客
 
+[阅读原文>>][original-article]
+
 2015 年 12 月 3 日
 
 欢迎来到 Swift.org 上的博客！我们于今日发布了 Swift 开源项目以及 Swift.org 网站。在这个开源社区里，我们可以一起工作，去发现并纠正问题，添加增强功能，并把 Swift 带入新的平台，这些都让我们无比激动。
@@ -39,7 +41,9 @@ Swift 是由很多不同的项目所构成的，由此也提供了一个可以�
 ___—— Swift 团队___
 
 <br />
-<sub>Copyright © 2016 Apple Inc. All rights reserved. Swift and the Swift logo are trademarks of Apple Inc.</sub>
+<sub>Original article: [https://swift.org/blog/welcome/][original-article]</sub>
+
+<sup>Original article copyright © 2016 Apple Inc. All rights reserved. Swift and the Swift logo are trademarks of Apple Inc.</sup>
 
 [swift-package-manager]: https://swift.org/package-manager/
 [github-apple-homepage]: http://github.com/apple
@@ -48,3 +52,4 @@ ___—— Swift 团队___
 [getting-started]: https://swift.org/getting-started/
 [download]: https://swift.org/download/
 [swift-evolution-process]: https://swift.org/contributing/#evolution-process
+[original-article]: https://swift.org/blog/welcome/
