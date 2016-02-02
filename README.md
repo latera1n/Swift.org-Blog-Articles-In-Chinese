@@ -4,7 +4,7 @@ Swift.org blog articles in Chinese
 ## 博客文章
 
 * [Swift.org 博客][welcome] (12/3/2015)
-* [wift 的 Linux 端口][swift-linux-port] (12/3/2015)
+* [Swift 的 Linux 端口][swift-linux-port] (12/3/2015)
 
 [welcome]: ./2015/12/welcome.md
 [swift-linux-port]: ./2015/12/swift-linux-port.md
