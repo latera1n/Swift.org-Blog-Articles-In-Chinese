@@ -9,7 +9,7 @@ Swift.org blog articles in Chinese
 
 [welcome]: ./2015/12/welcome.md
 [swift-linux-port]: ./2015/12/swift-linux-port.md
-[swift-3-api-design-guidlines]: ./2015/12/swift-3-api-design-guidlines.md
+[swift-3-api-design-guidlines]: ./2015/12/swift-3-api-design-guidelines.md
 
 ## 许可证/License
 * [Swift.org 的 Apache 2.0 许可证/The original license from Swift.org][original-license]
