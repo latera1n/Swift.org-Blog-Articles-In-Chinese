@@ -25,6 +25,10 @@ Swift 2.2 是其开源以后的第一个以开源版本发布的 Swift。它是�
 
 ### 日程安排
 * Swift 2.2 将于 2016 年 1 月 13 日从 `master` 分支出来。在 1 月 13 日后，`master` 分支将主要用于跟踪 Swift 3 的开发。上述安排尤其对 [swift][swift]、[swift-lldb][swift-lldb] 和 [swift-cmark][swift-cmark] 也适用。
+* `swift-2.2-branch` 将会从先前创建的 [swift-llvm][swift-llvm] 和 [swift-clang][swift-clang] 仓库中的约为为 252576 的 LLVM 版本分支出来，这样做是为了提供更长的一段时间稳定其下层的 LLVM 平台。上述的仓库将不会从 `master` 分支重新合并。
+* Swift 2.2 的最终发布日期仍待确定。因为 Swift 2.2 的本意是为了被用于新旧版本更替的交汇时期故可能会在 2016 年三月到五月之间的某个时间点发布。
+* 
+*
 
 
 [original-article]: https://swift.org/blog/swift-2-2-release-process/
