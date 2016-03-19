@@ -30,6 +30,13 @@ Swift 2.2 是其开源以后的第一个以开源版本发布的 Swift。它是�
 * Swift 2.2 的[二进制编译][binary-builds]发布分之将会与 Swift 的 `master` 开发分支的快照一起提供。
 * Swift 将会与 Swift 2.2 一样继续进行相同的分支过程并会在将来晚些时间公布。
 
+### 准备变更到 Swift 2.2
+* 根据上述规定，1 月 13 日之前的所有对 Swift 的 `master` 分支所做的修改都是 Swift 2.2 的一部分。
+* 之后，仅仅一些仅语言/API 上的的改变将会被考虑纳入 Swift 2.2。这些变更应该仅为能够使源代码可以与 Swift 2.1 更兼容的改变，或是一些为源代码提供的此处将会在 Swift 3 中为编译错误的迁移警告。
+* 接受更改的标准（正如发布管理者设定的那样）将会因为发布即将到来而随着时间推移变得愈加严格。
+* 对于那些没有直接提交权限的参与者，对 `swift-2.2-branch` 所做的贡献可以由[拉取请求][pull-request]开始。拉取请求一般适用于拉取 `master` 中已经已经出现的改变，除非这些变化是针对 Swift 2.2 做出的而不会被包含在 Swift 3 之中。例如，一个 bug 的修复应该首先被放入 `master` 分支并随后拉取进入 swift-2.2-branch` 分支。
+* 有着直接提交更改访问权限的核心贡献者将能够在日程中的一个严格管控分支更改的时间节点之前，在根据不同代码拥有者或发布管理者的指导下，直接严选或是应用变更纳入到 `swift-2.2-branch` 中。一旦 `swift-2.2-branch` 开始了严格的变更管控，我们将会在相关的部分的邮件订阅（比如 [swift-dev][swift-dev]）中对此发布一个声明。到那时所有的变更都需要经历一个通过[拉取请求][pull-request]开始的提名过程。
+
 
 [original-article]: https://swift.org/blog/swift-2-2-release-process/
 [swift-core-library]: https://swift.org/core-libraries/
@@ -39,3 +46,6 @@ Swift 2.2 是其开源以后的第一个以开源版本发布的 Swift。它是�
 [swift-clang]: https://github.com/apple/swift-clang
 [swift-lldb]: https://github.com/apple/swift-lldb
 [swift-cmark]: https://github.com/apple/swift-cmark
+[binary-builds]: https://swift.org/download/
+[pull-request]: https://swift.org/blog/swift-2-2-release-process/#pull-requests
+[swift-dev]: https://lists.swift.org/mailman/listinfo/swift-dev
