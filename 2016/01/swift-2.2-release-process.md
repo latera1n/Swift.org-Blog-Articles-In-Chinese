@@ -37,6 +37,30 @@ Swift 2.2 是其开源以后的第一个以开源版本发布的 Swift。它是�
 * 对于那些没有直接提交权限的参与者，对 `swift-2.2-branch` 所做的贡献可以由[拉取请求][pull-request]开始。拉取请求一般适用于拉取 `master` 中已经已经出现的改变，除非这些变化是针对 Swift 2.2 做出的而不会被包含在 Swift 3 之中。例如，一个 bug 的修复应该首先被放入 `master` 分支并随后拉取进入 swift-2.2-branch` 分支。
 * 有着直接提交更改访问权限的核心贡献者将能够在日程中的一个严格管控分支更改的时间节点之前，在根据不同代码拥有者或发布管理者的指导下，直接严选或是应用变更纳入到 `swift-2.2-branch` 中。一旦 `swift-2.2-branch` 开始了严格的变更管控，我们将会在相关的部分的邮件订阅（比如 [swift-dev][swift-dev]）中对此发布一个声明。到那时所有的变更都需要经历一个通过[拉取请求][pull-request]开始的提名过程。
 
+### 发布管理
+总体上的发布管理将会被以下个人监督，随着发布的临近，他们会宣布什么时候 Swift 2.2 发布过程中更严格的变更管控将生效。
+* [Ted Kremenek][ted-kremenek] 是 Swift 2.2 的总体发布管理者。
+* [Bob Wilson][bob-wilson] 是 Swift 2.2 中 LLVM 以及 Clang 部分的发布管理者。
+* [Kate Stone][kate-stone] 是 Swift 2.2 中 LLDB 部分的发布管理者。
+
+如果有任何关于发布管理过程的问题，欢迎直接向 [swift-dev][swift-dev] 或 Ted 发送电子邮件。
+
+### 拉取请求
+所有的拉取请求提名包含变更至 `swift-2.2-branch` 应该包括以下信息：
+* __解释__：一个对于修复的问题和做出的增强的描述，应言简意赅。
+* __范围__：一个对于其变更的影响/重要性的评估。比如，这个改变是否使得已有代码割裂开来等等。
+* __服务请求（SR）的问题__：如果此变更修复/实现了 [bugs.swift.org][bugs.swift.org] 列出的问题/增强功能，请写明该服务请求。
+* __风险__：采用这个变更的（具体的）风险是什么？
+* __测试__：哪些具体的测试已经做了或者需要进行去进一步验证这个变更的影响？
+
+收到影响部分的一个或多个[代码所有者][code-owners]应该审核该变更。技术审核可以由代码所有者委托或请求，如果认为该请求是合适的或有用的。
+
+在 `swift-2.2-branch` 进入严格的变更管制（发布管理者将会宣布）之前，代码管理者可以在对变更进行上述审核之后，直接接收拉取请求。一旦限制性的变更管控实施了之后，仅发布管理者被允许接收拉取请求进入  `swift-2.2-branch`。
+
+<br />
+<sub>Original article: [https://swift.org/blog/swift-2-2-release-process/][original-article]</sub>
+
+<sup>Original article copyright © 2016 Apple Inc. All rights reserved. Swift and the Swift logo are trademarks of Apple Inc.</sup>
 
 [original-article]: https://swift.org/blog/swift-2-2-release-process/
 [swift-core-library]: https://swift.org/core-libraries/
@@ -49,3 +73,8 @@ Swift 2.2 是其开源以后的第一个以开源版本发布的 Swift。它是�
 [binary-builds]: https://swift.org/download/
 [pull-request]: https://swift.org/blog/swift-2-2-release-process/#pull-requests
 [swift-dev]: https://lists.swift.org/mailman/listinfo/swift-dev
+[ted-kremenek]: https://github.com/tkremenek
+[bob-wilson]: https://github.com/bob-wilson
+[kate-stone]: https://github.com/k8stone
+[bugs.swift.org]: https://bugs.swift.org/
+[code-owners]: https://swift.org/community/#code-owners
