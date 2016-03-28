@@ -4,11 +4,11 @@
 
 2016 年 1 月 5 日
 
-这篇文章描述了 Swift 2.2 的所要达到的目标、发布进程和预估日程。
+这篇文章描述了 Swift 2.2 的所要达到的目标、发布流程和预估日程。
 
 Swift 2.2 是其开源以后的第一个以开源版本发布的 Swift。它是一个与 Swift 2.1 基本上完全兼容的版本。虽然语言本身没有很显而易见的变化，但是其中包括了大量的内核提升（例如，bug 修复、代码诊断信息的增强以及更快速的代码生成）。这个版本的发布是为了充当 Swift 2 和 Swift 3 的过渡的中点，因为 Swift 3 中将包括更多的容易混淆的语言本身和标准库的变更。
 
-发布版中将包含 Linux 平台上的 Swift，尽管它与其他平台相比相对较新而且存在已知警告。Swift 2.2 将不包含 [Swift 核心库][swift-core-library]但是将包括 LLDB 和 REPL。
+发布版中将包含 Linux 平台上的 Swift，尽管它与其他平台相比相对较新而且存在已知预警。Swift 2.2 将不包含 [Swift 核心库][swift-core-library]但是将包括 LLDB 和 REPL。
 
 [Swift 软件包管理器][swift-package-manager]仍然处在早起的开发中故将不会被包含在其中。
 
@@ -24,21 +24,21 @@ Swift 2.2 是其开源以后的第一个以开源版本发布的 Swift。它是�
 * [swift-cmark][swift-cmark]
 
 ### 日程安排
-* Swift 2.2 将于 2016 年 1 月 13 日从 `master` 分支出来。在 1 月 13 日后，`master` 分支将主要用于跟踪 Swift 3 的开发。上述安排尤其对 [swift][swift]、[swift-lldb][swift-lldb] 和 [swift-cmark][swift-cmark] 也适用。
-* `swift-2.2-branch` 将会从先前创建的 [swift-llvm][swift-llvm] 和 [swift-clang][swift-clang] 仓库中的约为为 252576 的 LLVM 版本分支出来，这样做是为了提供更长的一段时间稳定其下层的 LLVM 平台。上述的仓库将不会从 `master` 分支重新合并。
-* Swift 2.2 的最终发布日期仍待确定。因为 Swift 2.2 的本意是为了被用于新旧版本更替的交汇时期故可能会在 2016 年三月到五月之间的某个时间点发布。
-* Swift 2.2 的[二进制编译][binary-builds]发布分之将会与 Swift 的 `master` 开发分支的快照一起提供。
+* Swift 2.2 将于 __2016 年 1 月 13 日__从 `master` 分支出来。在 1 月 13 日后，`master` 分支将主要用于追踪 Swift 3 的开发。上述安排尤其对 [swift][swift]、[swift-lldb][swift-lldb] 和 [swift-cmark][swift-cmark] 也适用。
+* `swift-2.2-branch` 将会从先前创建的 [swift-llvm][swift-llvm] 和 [swift-clang][swift-clang] 仓库中 LLVM 的约为 252576 版本分支出来，这样做是为了提供更长的一段时间用以稳定其下层的 LLVM 平台。此仓库将不会从 `master` 分支重新合并。
+* Swift 2.2 的最终发布日期仍待确定。因为 Swift 2.2 的本意是为了被用于新版本发布的临近时期，故其可能会在 2016 年三月到五月之间的某个时间点发布。
+* Swift 2.2 的[二进制编译][binary-builds]发布分支将会与 Swift 的 `master` 开发分支的快照一起提供。
 * Swift 将会与 Swift 2.2 一样继续进行相同的分支过程并会在将来晚些时间公布。
 
 ### 准备变更到 Swift 2.2
 * 根据上述规定，1 月 13 日之前的所有对 Swift 的 `master` 分支所做的修改都是 Swift 2.2 的一部分。
-* 之后，仅仅一些仅语言/API 上的的改变将会被考虑纳入 Swift 2.2。这些变更应该仅为能够使源代码可以与 Swift 2.1 更兼容的改变，或是一些为源代码提供的此处将会在 Swift 3 中为编译错误的迁移警告。
+* 之后，仅仅一些仅语言/API 上的的改变将会被考虑纳入 Swift 2.2。这些变更应该仅为能够使源代码可以与 Swift 2.1 更兼容的改变，或是一些为源代码提供的将会在 Swift 3 中产生编译错误的迁移警告。
 * 接受更改的标准（正如发布管理者设定的那样）将会因为发布即将到来而随着时间推移变得愈加严格。
-* 对于那些没有直接提交权限的参与者，对 `swift-2.2-branch` 所做的贡献可以由[拉取请求][pull-request]开始。拉取请求一般适用于拉取 `master` 中已经已经出现的改变，除非这些变化是针对 Swift 2.2 做出的而不会被包含在 Swift 3 之中。例如，一个 bug 的修复应该首先被放入 `master` 分支并随后拉取进入 swift-2.2-branch` 分支。
-* 有着直接提交更改访问权限的核心贡献者将能够在日程中的一个严格管控分支更改的时间节点之前，在根据不同代码拥有者或发布管理者的指导下，直接严选或是应用变更纳入到 `swift-2.2-branch` 中。一旦 `swift-2.2-branch` 开始了严格的变更管控，我们将会在相关的部分的邮件订阅（比如 [swift-dev][swift-dev]）中对此发布一个声明。到那时所有的变更都需要经历一个通过[拉取请求][pull-request]开始的提名过程。
+* 对于那些没有直接提交权限的参与者，对 `swift-2.2-branch` 所做的贡献可以由[拉取请求][pull-request]开始。拉取请求一般适用于拉取 `master` 中已经已经出现的改变，除非这些变化是针对 Swift 2.2 做出的而不会被包含在 Swift 3 之中。例如，一个 bug 的修复应该首先被置于 `master` 分支并随后拉取进入 swift-2.2-branch` 分支。
+* 有着直接提交更改访问权限的核心贡献者将能够在日程中的一个严格管控分支更改的时间节点之前，在根据不同代码拥有者或发布管理者的指导下，直接严选或是应用变更并纳入到 `swift-2.2-branch` 中。一旦 `swift-2.2-branch` 开始了严格的变更管控，我们将会在相关的部分的邮件订阅（比如 [swift-dev][swift-dev]）中对此发布一个声明。到那时所有的变更都需要经历一个通过[拉取请求][pull-request]开始的提名过程。
 
 ### 发布管理
-总体上的发布管理将会被以下个人监督，随着发布的临近，他们会宣布什么时候 Swift 2.2 发布过程中更严格的变更管控将生效。
+总体上的发布管理将会被以下个人监督，随着发布的临近，在Swift 2.2 发布过程中，他们会宣布什么时候更严格的变更管控将生效。
 * [Ted Kremenek][ted-kremenek] 是 Swift 2.2 的总体发布管理者。
 * [Bob Wilson][bob-wilson] 是 Swift 2.2 中 LLVM 以及 Clang 部分的发布管理者。
 * [Kate Stone][kate-stone] 是 Swift 2.2 中 LLDB 部分的发布管理者。
