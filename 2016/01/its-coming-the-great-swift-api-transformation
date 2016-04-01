@@ -1,4 +1,4 @@
-# 绝佳的 Swift API 变换即将到来
+# 绝佳的 Swift API 风格转变即将到来
 
 [阅读原文>>][original-article]
 
@@ -11,4 +11,22 @@ Cocoa、Swift 标准库和可能甚至是你自己的类型和方法，它们都
 开发者的经历告诉我们，在查看 API 的时候，我们很容易就能看出其中有提升的空间。不仅在于编译器引入 Objective-C API 的方式——导致了一些在 Swift 中看起来不是很舒服的结果，而且在于 Swift 标准库中缺失一定程度的，也是 Cocoa 用户使用的时候所预期的规律性和连贯性。所以对此在 Apple 的我们决定做点什么。
 
 为了保持 Cocoa 和 Swift 核心库的一致性，我们需要定点打击：API 中的一种大家都可以遵循的，统一的、书写上的方法。我们以回溯并质疑我们最初的假设开始。现存的指导方针必定是极好的，但是其中很多内容却是为 Objective-C 而设定的，它们并没有覆盖具体的 Swift 功能例如缺省参数。更重要的是，它们制定是并没有收到新兴的“Swift 之感”的影响，而这点正是我们觉得应该达到的最重要的一点。
+
+我们在开发这些指导方针的时候我们便把它们运用到了标准库、整个 Cocoa 和几个实例项目之中。在此期间我们重复了评估结果并不断改进的过程。在 Swift 开源之前，我们便已经非公开地完成了这些改进，并即将在下个发行版本中带为大家带来我们改进的结果。但是我们觉得一个 Swift 的新的时代已经来临：是时候向全世界展示一下我们最近做了些什么了。下面就是一个代码看起来是什么样子的例子，在改变之前是这样的：
+
+```swift
+class UIBezierPath : NSObject, NSCopying, NSCoding { ... }
+...
+path.addLineToPoint(CGPoint(x: 100, y: 0))
+path.fillWithBlendMode(kCGBlendModeMultiply, alpha: 0.7)
+```
+
+以及改变之后：
+
+```swift
+class UIBezierPath : Object, Copying, Coding { ... }
+...
+path.addLineTo(CGPoint(x: 100, y: 0))
+path.fillWith(kCGBlendModeMultiply, alpha: 0.7)
+```
 
