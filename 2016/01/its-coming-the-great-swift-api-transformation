@@ -30,3 +30,22 @@ path.addLineTo(CGPoint(x: 100, y: 0))
 path.fillWith(kCGBlendModeMultiply, alpha: 0.7)
 ```
 
+我们已经把提议的风格转变的三个部分发布出来以供公共审视：[Swift 评审组：Cocoa 引入方式的改变][swift’s-evolution=group:-changes-to-how-cocoa-is-imported]、[核心库外表上的改变][changes-to-the-surface-of-the-standard-library]以及把所有紧密联系在一起的[API 指导方针][api-guidelines]。参与者们也已经开始向我们提供改进的建议，由此我们能够从中看出它们是[如何影响 API][affect－apis] 的。
+
+举个例子，我们[发现][explored]的[有一个建议][one-suggestion]是把这个调用：
+
+```swift
+path.addArcWithCenter(
+  origin, radius: 20.0, 
+  startAngle: 0.0, endAngle: CGFloat(M_PI) * 2.0, clockwise: true)
+```
+
+改变成这样：
+
+```swift
+path.addArc(
+  center: origin, radius: 20.0, 
+  startAngle: 0.0, endAngle: CGFloat(M_PI) * 2.0, clockwise: true)
+```
+
+
