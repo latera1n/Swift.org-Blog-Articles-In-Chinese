@@ -48,4 +48,8 @@ path.addArc(
   startAngle: 0.0, endAngle: CGFloat(M_PI) * 2.0, clockwise: true)
 ```
 
+我们是否会对此作出改变？虽然评审团已经确定了，但也是时候让大家听到你呼声了。审核周期已经延长至 __2 月 5 日 星期五__了。如果你有兴趣帮助塑造你的语言和框架的未来，请加入我们的讨论。提议和相关的审核帖子在这里：
 
+* [API 设计指导方针][api-design－guidelines]——[讨论][discussion-0]
+* [更好的将 Objective-C API 翻译进入 Swift][better-translation-of-objective-c-apis-into-swift]——[讨论][discussion-1]
+* [应用 API 指导方针到标准库][apply-api-Guidelines-to-the-standard-library]——[讨论][discussion-2]
