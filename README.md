@@ -14,7 +14,7 @@ Swift.org blog articles in Chinese
 
 ##### 2016 年 1 月
 * [Swift 2.2 发布进程][swift-2.2-release-process] (1/5/2016)
-* [绝佳的 Swift API 风格转变即将到来][its-coming-the-great-swift-api-transformation] (1/29/2016)
+* [即将到来：绝佳的 Swift API 风格转变][its-coming-the-great-swift-api-transformation] (1/29/2016)
 
 [swift-2.2-release-process]: ./2016/01/swift-2.2-release-process.md
 [its-coming-the-great-swift-api-transformation]: ./2016/01/its-coming-the-great-swift-api-transformation.md
