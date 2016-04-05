@@ -1,8 +1,8 @@
-# 绝佳的 Swift API 风格转变即将到来
+# 即将到来：绝佳的 Swift API 风格转变
 
 [阅读原文>>][original-article]
 
-2016 年 1 月 29 日&nbsp;&nbsp;&nbsp;[Dave Abrahams][dave-abrahams]
+2016 年 1 月 29 日&nbsp;&nbsp;&nbsp;&nbsp;[Dave Abrahams][dave-abrahams]
 
 Cocoa、Swift 标准库和可能甚至是你自己的类型和方法，都将作出改变，而且你可以帮助决定如何改变。
 
