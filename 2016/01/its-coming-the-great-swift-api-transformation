@@ -54,6 +54,11 @@ path.addArc(
 * [更好的将 Objective-C API 翻译进入 Swift][better-translation-of-objective-c-apis-into-swift]——[讨论][discussion-1]
 * [应用 API 指导方针到标准库][apply-api-Guidelines-to-the-standard-library]——[讨论][discussion-2]
 
+<br />
+<sub>Original article: [https://swift.org/blog/swift-api-transformation/][original-article]</sub>
+
+<sup>Original article copyright © 2016 Apple Inc. All rights reserved. Swift and the Swift logo are trademarks of Apple Inc.</sup>
+
 [original-article]: https://swift.org/blog/swift-api-transformation/
 [swift’s-evolution-group]: https://swift.org/community/#mailing-lists
 [swift’s-evolution=group:-changes-to-how-cocoa-is-imported]: https://swift.org/community/#mailing-lists
