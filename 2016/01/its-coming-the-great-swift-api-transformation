@@ -2,13 +2,13 @@
 
 [阅读原文>>][original-article]
 
-2016 年 1 月 29 日
+2016 年 1 月 29 日    [Dave Abrahams][dave-abrahams]
 
-Cocoa、Swift 标准库和可能甚至是你自己的类型和方法，它们都将作出改变，而且你可以帮助决定如何改变。
+Cocoa、Swift 标准库和可能甚至是你自己的类型和方法，都将作出改变，而且你可以帮助决定如何改变。
 
-自从 Swift 发布以来，Swift 标准库中的 Cocoa 接口和 API 之间的样式上的鸿沟就一直存在，其中很多东西经常十分不必要地看起来相差明显。这并不仅仅是欠缺美学上的考虑，不一致性和缺少可预知性使得万事更难，不论是编程、除错或是维护。令人庆幸的是，尽管这些鸿沟是存在的，但 Swift 开发者仍然编写出了大量的优秀的代码，随之也逐步发展出了一段“Swifty”的代码应该看起来和体验起来是什么样子的一些感觉。
+自从 Swift 发布以来，Swift 标准库中的 Cocoa 接口和 API 之间的样式上的鸿沟就一直存在，其中很多东西经常十分不必要地看起来差异明显。这并不仅仅欠缺美学上的考虑，不一致性和缺少可预知性使得万事更难，不论是编程、除错或是维护。令人庆幸的是，尽管这些鸿沟存在，但 Swift 开发者仍然编写出了大量的优秀的代码，随之也逐步发展出了一种“Swifty”的代码应该看起来和体验起来是什么样子的感觉。
 
-开发者的经历告诉我们，在查看 API 的时候，我们很容易就能看出其中有提升的空间。不仅在于编译器引入 Objective-C API 的方式——导致了一些在 Swift 中看起来不是很舒服的结果，而且在于 Swift 标准库中缺失一定程度的，也是 Cocoa 用户使用的时候所预期的规律性和连贯性。所以对此在 Apple 的我们决定做点什么。
+开发者的经历告诉我们，在审视 API 的时候，我们很容易就能看出其中有提升的空间。这些提升的空间不仅在于编译器引入 Objective-C API 的方式——导致了一些在 Swift 中看起来不是很舒服的结果，而且在于 Swift 标准库中缺失一定程度的，也是 Cocoa 用户使用的时候所预期的规律性和连贯性。对此身在 Apple 的我们决定做点什么。
 
 为了保持 Cocoa 和 Swift 核心库的一致性，我们需要定点打击：API 中的一种大家都可以遵循的，统一的、书写上的方法。我们以回溯并质疑我们最初的假设开始。现存的指导方针必定是极好的，但是其中很多内容却是为 Objective-C 而设定的，它们并没有覆盖具体的 Swift 功能例如缺省参数。更重要的是，它们制定是并没有收到新兴的“Swift 之感”的影响，而这点正是我们觉得应该达到的最重要的一点。
 
@@ -60,6 +60,7 @@ path.addArc(
 <sup>Original article copyright © 2016 Apple Inc. All rights reserved. Swift and the Swift logo are trademarks of Apple Inc.</sup>
 
 [original-article]: https://swift.org/blog/swift-api-transformation/
+[dave-abrahams]: https://github.com/dabrahams/
 [swift’s-evolution-group]: https://swift.org/community/#mailing-lists
 [swift’s-evolution=group:-changes-to-how-cocoa-is-imported]: https://swift.org/community/#mailing-lists
 [changes-to-the-surface-of-the-standard-library]: https://github.com/apple/swift-evolution/blob/master/proposals/0006-apply-api-guidelines-to-the-standard-library.md
