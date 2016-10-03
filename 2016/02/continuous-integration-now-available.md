@@ -2,7 +2,7 @@
 
 [阅读原文>>](https://swift.org/blog/swift-ci/)
 
-2016 年 2 月 1 日 &nbsp; [Nicole Jacque](https://github.com/najacque/)
+2016 年 2 月 1 日&nbsp;&nbsp;&nbsp;&nbsp;[Nicole Jacque](https://github.com/najacque/)
 
 我们很高兴地宣布我们已经为 Swift 项目推出了[持续集成](https://swift.org/continuous-integration)（又名 CI）功能！
 
