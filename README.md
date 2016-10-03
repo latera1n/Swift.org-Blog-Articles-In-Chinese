@@ -19,6 +19,10 @@ Swift.org blog articles in Chinese
 [swift-2.2-release-process]: ./2016/01/swift-2.2-release-process.md
 [its-coming-the-great-swift-api-transformation]: ./2016/01/its-coming-the-great-swift-api-transformation.md
 
+##### 2016 年 2 月
+* [持续集成现已可用][continuous-integration-now-available] (2/1/2016)
+[continuous-integration-now-available]: ./2016/02/continuous-integration-now-available.md
+
 #### 许可证/License
 * [Swift.org 的 Apache 2.0 许可证/The original license from Swift.org][original-license]
 * [本项目的 MIT 许可证/MIT License for this project][license]
