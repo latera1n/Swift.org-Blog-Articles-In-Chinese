@@ -22,8 +22,11 @@ Swift.org blog articles in Chinese
 ##### 2016 年 2 月
 * [持续集成现已可用][swift-ci] (2/1/2016)
 * [Swift 基准评测套件现已可用][swift-benchmark-suite] (2/8/2016)
+* [扩展代码提交访问权][swift-commit-access] (2/29/2016)
+
 [swift-ci]: ./2016/02/swift-ci.md
 [swift-benchmark-suite]: ./2016/02/swift-benchmark-suite.md
+[swift-commit-access]: ./2016/02/swift-commit-access.md
 
 #### 许可证/License
 * [Swift.org 的 Apache 2.0 许可证/The original license from Swift.org][original-license]
