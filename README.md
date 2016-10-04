@@ -20,8 +20,10 @@ Swift.org blog articles in Chinese
 [its-coming-the-great-swift-api-transformation]: ./2016/01/its-coming-the-great-swift-api-transformation.md
 
 ##### 2016 年 2 月
-* [持续集成现已可用][continuous-integration-now-available] (2/1/2016)
-[continuous-integration-now-available]: ./2016/02/continuous-integration-now-available.md
+* [持续集成现已可用][swift-ci] (2/1/2016)
+* [Swift 基准评测套件现已可用][swift-benchmark-suite] (2/8/2016)
+[swift-ci]: ./2016/02/swift-ci.md
+[swift-benchmark-suite]: ./2016/02/swift-benchmark-suite.md
 
 #### 许可证/License
 * [Swift.org 的 Apache 2.0 许可证/The original license from Swift.org][original-license]
