@@ -1,11 +1,13 @@
 # <img src="./swift-logo.png" width = "28px"> Swift.org 博客文章中文翻译
 Swift.org blog articles in Chinese
 
-## 博客文章
+### 博客文章列表
 
 ##### 2016 年 3 月
+* [Swift 2.2 中的新功能][swift-2-2-new-features] (3/30/2016)
 * [Swift 2.2 现已发布！][swift-2-2-released] (3/21/2016)
 
+[swift-2-2-new-features]: ./2016/03/swift-2-2-new-features.md
 [swift-2-2-released]: ./2016/03/swift-2-2-released.md
 
 ##### 2016 年 2 月
