@@ -205,9 +205,9 @@ Swift 2.2 元组将比较到第 6 个元数，这也就是只要元组包含不�
 
 有关更多信息，请参阅 [Swift 演进提案](https://github.com/apple/swift-evolution/blob/master/proposals/0007-remove-c-style-for-loops.md)或阅读详细说明原理的 [swift-evolution-announce 帖子](https://lists.swift.org/pipermail/swift-evolution-announce/2015-December/000001.html)。
 
-#### `++` 和 `--` 已经弃用
+### `++` 和 `--` 已经弃用
 
-如果你使用 C 语言风格的循环，下一个变化可能会让你更加惊讶：`++` 和 `--` 也已经被弃用，不管是作为前缀还是后缀操作符。这意味着如同 `for var i = 0; i < 10; i++` 的代码包含不止一个，而是_两_个弃用，这即使在快速行进中的 Swift 世界里也相当不同寻常的。
+如果你使用 C 语言风格的循环，下一个变化可能会让你更加惊讶：`++` 和 `--` 也已经被弃用，不管是作为前缀还是后缀操作符。这意味着如同 `for var i = 0; i < 10; i++` 的代码包含不止一个，而是*两*个弃用，这即使在快速行进中的 Swift 世界里也相当不同寻常的。
 
 此更改意味着下面的所有代码现在都已被弃用，并将在 Swift 3 中完全停止工作：
 
