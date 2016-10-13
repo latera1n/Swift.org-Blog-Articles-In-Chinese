@@ -24,7 +24,7 @@ Swift 2.2 引入了一个新的编译器指令，使得跨版本兼容不在话�
 >#endif
 >```
 
-这个指令与 Swift 2 引入的，在运行时检查的 `#available` 语法不同——新功能是在编译时，这使得没有通过语言检查的代码在实际上变得不可见。如果你想的话你可以写出这样的代码：
+这个指令与在 Swift 2 中引入的，在运行时检查的 `#available` 语法不同——这个新功能是在编译时，这使得没有通过语言检查的代码在实际上变得隐形。如果你想的话，你可以写出这样的代码：
 
 >```swift
 >#if swift(>=3.0)
@@ -58,11 +58,11 @@ Swift 2.2 引入了一个新的编译器指令，使得跨版本兼容不在话�
 >}
 >```
 
-虽然代码本身在语法上是没有问题的，但是应用程序会奔溃因为导航栏的按钮调用了一个方法 `addNewFireflyRefernce()` —— 在“reference”中少了一个“e”。这些简单的拼写错误会很轻易的导致程序错误，因此 Swift 2.2 废除了使用字符串作为选择器，作为代替，引入了新的语法：`#selector`。
+虽然代码本身在语法上是没有问题的，但是应用程序却会奔溃，因为导航栏的按钮调用了一个 `addNewFireflyRefernce()` 方法—— 在“reference”中少了一个“e”。这些简单的拼写错误会很轻易的导致程序错误，因此 Swift 2.2 废除了使用字符串作为选择器，作为代替，引入了新的语法：`#selector`。
 
 使用 `#selector` 将在编译时检查你的代码，以确保你要调用的方法确实存在。更好的是，如果方法不存在，你会得到一个编译错误：Xcode 将拒绝构建你的应用程序，由此，这个可能的的程序错误来源也会被驱逐到遗忘之地。
 
-下面是使用 `#selector` 改写的上文的代码示例：
+下面是使用 `#selector` 改写过的上文中的代码示例：
 
 >```swift
 >override func viewDidLoad() {
@@ -78,13 +78,13 @@ Swift 2.2 引入了一个新的编译器指令，使得跨版本兼容不在话�
 >}
 >```
 
-在代码构建的时候，编译器将返回“使用未解析的标识符‘addNewFireflyRefernce’”的错误——闪闪发亮！
+在代码构建的时候，编译器将返回“使用未解析的标识符‘addNewFireflyRefernce’”的错误——亮瞎狗眼！
 
 有关更多信息，请参阅 [Swift 演进提案](https://github.com/apple/swift-evolution/blob/master/proposals/0022-objc-selectors.md)或阅读详细说明原理的 [swift-evolution-announce 帖子](https://lists.swift.org/pipermail/swift-evolution-announce/2016-January/000026.html)。
 
 ### 更多作为参数标签的关键字
 
-Swift有很多关键字：诸如 `class`，`func`，`let` 和 `pulic` 等一些有着特殊意义而且不能被用作标识符的小东西。Swift 一直是允许你使用关键字作为参数标签，但是只有当你把它们放在反引号里，像这样：
+Swift 有很多关键字：诸如 `class`，`func`，`let` 和 `pulic` 等一些有着特殊意义而且不能被用作标识符的小东西。Swift 一直允许你使用关键字作为参数标签，但只限于当你把它们放在反引号里的时候，像这样：
 
 >```swift
 >func visitCity(name: String, `in` state: String) {
@@ -94,7 +94,7 @@ Swift有很多关键字：诸如 `class`，`func`，`let` 和 `pulic` 等一些�
 >visitCity("Nashville", `in`: "Tennessee")
 >```
 
-从 Swift 2.2 开始，任何关键字可以用作参数标签，除了 `inout`，`var` 和 `let`。如果你有代码在反引号中使用了关键字，你会得到一个 Xcode 的修复提示让你去删除它们。 所以，像这样的代码现在已经成为可能：
+从 Swift 2.2 开始，任何关键字可以被用作参数标签了，除了 `inout`，`var` 和 `let`。如果你有代码在反引号中使用了关键字，你会得到一个 Xcode 的修复提示让你去删除它们。 所以，像这样的代码现在已经成为可能：
 
 >```swift
 >func visitCity(name: String, in state: String) {
@@ -108,7 +108,7 @@ Swift有很多关键字：诸如 `class`，`func`，`let` 和 `pulic` 等一些�
 
 ### 元组比较已经内置
 
-元组是Swift中的一个基本数据类型，且带来了许多好处——尤其是能从函数返回多个值。 Swift 2.2 引入了比较两个元组平等的能力，这意味着它将对一个元组中的每个元素与另一个元组中的匹配元素进行检查，并报告为 true 如果所有元素都相匹配。
+元组是 Swift 中的一个基本数据类型，且带来了许多好处——尤其是能从函数返回多个值。 Swift 2.2 引入了比较两个元组等价的能力，这意味着它将对一个元组中的每个元素与另一个元组中的匹配元素进行检查，并报告为 true 当所有元素都相匹配。
 
 例如，以下代码将打印“No match”：
 
@@ -123,9 +123,9 @@ Swift有很多关键字：诸如 `class`，`func`，`let` 和 `pulic` 等一些�
 >}
 >```
 
-Swift 2.2 元组将比较到第 6 个元数，这也就是只要元组包含不超过里六个元素，它们就可以进行比较的花哨的说法。
+Swift 2.2 元组将比较到第 6 个元数，这也就是只要元组包含不超过六个元素，它们就可以进行比较的花哨说法。
 
-一个警告：Swift 2.2 在检查相等性时将忽略你的元素名称，因此 `singer` 和 `bird` 在下面的代码中将被视为相等：
+一个警告：Swift 2.2 在检查等价时将忽略你的元素名称，因此 `singer` 和 `bird` 在下面的代码中将被视为相等：
 
 >```swift
 > let singer = (first: "Taylor", last: "Swift")
@@ -142,7 +142,7 @@ Swift 2.2 元组将比较到第 6 个元数，这也就是只要元组包含不�
 
 ### 元组泼贱语法已经弃用
 
-再多谈论元组一段时间，Swift 2.2 弃用了一个很少使用的功能，我提到它只是因为它惊奇的名字。 在 Swift 2.1 及更早版本中，你可以使用精心制作的元组来填充函数的参数。 因此，如果你有一个函数需要两个参数，你可以使用有两个元素的元去组调用它，只要元组有着正确的类型和元素名称。例如：
+再多谈论元组一段时间，Swift 2.2 弃用了一个很少使用的功能，我提到它只是因为它令人惊奇的名字。 在 Swift 2.1 及更早版本中，你可以使用精心制作的元组来填充函数的参数。 因此，如果你有一个函数需要两个参数，你可以使用有两个元素的元组去调用它，只要元组有着正确的类型和元素名称。例如：
 
 >```swift
 >func describePerson(name: String, age: Int) {
@@ -153,7 +153,7 @@ Swift 2.2 元组将比较到第 6 个元数，这也就是只要元组包含不�
 >describePerson(person)
 >```
 
-这种语法——被有爱地称为“元组泼贱语法”——是与大家习惯的 Swift 的自我记录，可读性风格的对立，因此它在 Swift 2.2 中已被弃用。
+这种语法——被有爱地称为“元组泼贱语法”——是与大家习惯的 Swift 的自我记录，良好可读性风格的对立，因此它在 Swift 2.2 中已被弃用。
 
 有关更多信息，请参阅 [Swift 演进提案](https://github.com/apple/swift-evolution/blob/master/proposals/0029-remove-implicit-tuple-splat.md)或阅读详细说明原理的 [swift-evolution-announce 帖子](https://lists.swift.org/pipermail/swift-evolution-announce/2016-February/000033.html)。
 
@@ -169,9 +169,9 @@ Swift 2.2 元组将比较到第 6 个元数，这也就是只要元组包含不�
 >}
 >```
 
-这些用法已经在 Swift 2.2 中被弃用，并将在 Swift 3.0 中被完全删除——这是迈向从此不用再输入分号的另一步。
+这种用法已经在 Swift 2.2 中被废弃，并将在 Swift 3.0 中被完全删除——这是迈向从此不用再输入分号的另一步。
 
-如果使用 Xcode，你可能会得到一个修复提示，它会将你的 C 语言风格的循环转换成现代 Swift 风格。 在前面代码的情况下，结果将使用如下的一个范围：
+如果使用 Xcode，你可能会得到一个修复提示，它会将你的 C 语言风格的循环转换成现代 Swift 风格。 在前面代码的情况下，转换的结果将使用如下的一个范围：
 
 >```swift
 >for i in 0 ..< 10 {
@@ -182,7 +182,7 @@ Swift 2.2 元组将比较到第 6 个元数，这也就是只要元组包含不�
 但是，修复提示的功能有限，因此你需要自己做一些工作。 例如下面的两个循环，此时修复提示无法帮到你：
 
 >```swift
->>for var i = 10; i > 0; i-- {
+>for var i = 10; i > 0; i-- {
 >    print(i)
 >}
 >
@@ -191,7 +191,7 @@ Swift 2.2 元组将比较到第 6 个元数，这也就是只要元组包含不�
 >}
 >```
 
-在第一种情况下，应使用 `(1...10).reverse()` 来创建反向范围。 这_并不_同于写下 `i in 10...1`，这段代码将会被编译但在运行时缺会崩溃。 在第二种情况下，你应该使用 `stride(to:by:)` 来累加 2。 所以，在 Swift 2.2 中正确重写的两个循环应像是这样的：
+在第一种情况下，应使用 `(1...10).reverse()` 来创建反向范围。 这_并不_同于写下 `i in 10...1`，这段代码将会被编译但在运行时却会崩溃。 在第二种情况下，你应该使用 `stride(to:by:)` 以 2 的步进进行计数。 所以，在 Swift 2.2 中正确重写的两个循环应如同这样的：
 
 >```swift
 >for i in (1...10).reverse() {
@@ -207,7 +207,7 @@ Swift 2.2 元组将比较到第 6 个元数，这也就是只要元组包含不�
 
 ### `++` 和 `--` 已经弃用
 
-如果你使用 C 语言风格的循环，下一个变化可能会让你更加惊讶：`++` 和 `--` 也已经被弃用，不管是作为前缀还是后缀操作符。这意味着如同 `for var i = 0; i < 10; i++` 的代码包含不止一个，而是*两*个弃用，这即使在快速行进中的 Swift 世界里也相当不同寻常的。
+如果你使用 C 语言风格的循环，下一个变化可能会让你更加惊讶：`++` 和 `--` 也已经被弃用，不管是作为前缀还是后缀操作符。这意味着如同 `for var i = 0; i < 10; i++` 的代码包含着不止一个，而是_两_个弃用，这即使在快速行进中的 Swift 世界里也是相当不同寻常的。
 
 此更改意味着下面的所有代码现在都已被弃用，并将在 Swift 3 中完全停止工作：
 
@@ -228,7 +228,7 @@ Swift 2.2 元组将比较到第 6 个元数，这也就是只要元组包含不�
 * C 语言风格的循环——一个经常使用 `++` 和 `--` 的地方也被弃用。
 * 这些运算符的结果的使用取决于它们是否被用于前缀或后缀，而这可能导致混淆。
 
-Swift Evolution 提案中对这一变化的一个援引，简明地总结了这个改变的理由：它们没有通过“如果我们还没有这些东西，我们是否会把它们添加到 Swift 3？”的衡量。\[[1](https://github.com/apple/swift-evolution/blob/master/proposals/0004-remove-pre-post-inc-decrement.md)\]
+Swift 演进提案中对这一变化的一个援引，简明地总结了这个改变的理由：它们没有通过“如果我们还没有这些东西，我们是否会把它们添加到 Swift 3？”的衡量。\[[1](https://github.com/apple/swift-evolution/blob/master/proposals/0004-remove-pre-post-inc-decrement.md)\]
 
 欲了解有关这个改变的更多信息，请参阅 [Swift 演进提案](https://github.com/apple/swift-evolution/blob/master/proposals/0004-remove-pre-post-inc-decrement.md)。
 
@@ -262,7 +262,7 @@ Swift Evolution 提案中对这一变化的一个援引，简明地总结了这�
 
 在运行时，`var` 示例与 `inout` 示例将产生不同的输出，因为 `var` 参数的更改只适用于函数内部，而对 `inout` 参数的更改直接影响原始值。
 
-在 Swift 2.2 中，在 Swift 3.0 中移除 `var` 关键字作为函数参数之前，弃用了它以清除了这种混淆。 如果你想复制以前的行为，只需要在函数中创建自己的副本，如下所示：
+在 Swift 2.2 中，且在 Swift 3.0 中移除 `var` 关键字作为函数参数之前，弃用了它以清除了这种混淆。 如果你想复制以前的行为，只需要在函数中创建自己的参数副本，如下所示：
 
 >```swift
 >func greet(name: String) {
@@ -295,9 +295,9 @@ Swift 编译器自动提供一些在调试时有用的符号。 以前这些符�
 
 有关更多信息，请参阅 [Swift 演进提案](https://github.com/apple/swift-evolution/blob/master/proposals/0028-modernizing-debug-identifiers.md)或阅读详细说明原理的 [swift-evolution-announce 帖子](https://lists.swift.org/pipermail/swift-evolution-announce/2016-February/000030.html)。
 
-### 以及更多……
+### 还有更多……
 
-这篇文章已经涵盖了可能影响大多数开发者的变化，但其他较小的更改也已经随着编译器消息的改进和性能的增强所引入。 [点击此处获取正式发行说明](https://swift.org/blog/swift-2-2-released/)，你可以在其中找到相关更改完整讨论的链接以及针对 Linux 的安装说明。
+这篇文章已经涵盖了可能影响大多数开发者的变化，但其他较小的更改也已经随着编译器消息的改进和性能的增强而引入。 [点击此处获取正式发行说明](https://swift.org/blog/swift-2-2-released/)，你可以在其中找到相关更改的完整讨论链接以及针对 Linux 的安装说明。
 
 <br />
 <sub>Original article: [https://swift.org/blog/swift-2-2-new-features/](https://swift.org/blog/swift-2-2-new-features/)</sub>

@@ -3,6 +3,11 @@ Swift.org blog articles in Chinese
 
 ### 博客文章列表
 
+##### 2016 年 5 月
+* [Swift 3.0 发布进程][swift-3-0-release-process] (5/6/2016)
+
+[swift-3-0-release-process]: ./2016/05/swift-3-0-release-process.md
+
 ##### 2016 年 3 月
 * [Swift 2.2 中的新功能][swift-2-2-new-features] (3/30/2016)
 * [Swift 2.2 现已发布！][swift-2-2-released] (3/21/2016)
