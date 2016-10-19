@@ -6,8 +6,10 @@ Swift.org blog articles in Chinese
 ### 2016
 
 ##### 6 月
+* [Swift 3.0 预览版本 1 现已发布！][swift-3-0-preview-1-released] (6/13/2016)
 * [Swift 2.3][swift-2-3] (6/12/2016)
 
+[swift-3-0-preview-1-released]: ./2016/06/swift-3-0-preview-1-released.md
 [swift-2-3]: ./2016/06/swift-2-3.md
 
 ##### 5 月
