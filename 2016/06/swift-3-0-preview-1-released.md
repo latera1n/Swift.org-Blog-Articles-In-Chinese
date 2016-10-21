@@ -2,7 +2,7 @@
 
 [阅读原文>>](https://swift.org/blog/swift-3-0-preview-1-released/)
 
-2016 年 6 月 13 日
+2016 年 6 月 13 日&nbsp;&nbsp;&nbsp;&nbsp;(Ted Kremenek)[https://github.com/tkremenek/]
 
 我们非常高兴地宣布 Swift 3.0 开发者预览版本 1！
 

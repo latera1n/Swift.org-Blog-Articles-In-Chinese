@@ -5,6 +5,12 @@ Swift.org blog articles in Chinese
 
 ### 2016
 
+##### 7 月
+
+* [Xcode Playground 支持][swift-xcode-playground-support] (7/7/2016)
+
+[swift-xcode-playground-support]: ./2016/07/swift-xcode-playground-support.md
+
 ##### 6 月
 * [Swift 3.0 预览版本 1 现已发布！][swift-3-0-preview-1-released] (6/13/2016)
 * [Swift 2.3][swift-2-3] (6/12/2016)
