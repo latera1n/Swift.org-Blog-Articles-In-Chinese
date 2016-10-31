@@ -4,7 +4,7 @@
 
 2016 年 9 月 13 日&nbsp;&nbsp;&nbsp;&nbsp;[Ted Kremenek](https://github.com/tkremenek/)
 
-Swift 3.0，Swift 开源以来的第一个主要版本，现在已经正式发布！Swift 3 是一个重大的发布版本，其中包含对核心语言和标准库的重要改动和精炼，对 Swift 在 Linux 上移植版的主要补充，以及 [Swift 包管理器](https://swift.org/package-manager)的第一个正式发布版。
+Swift 3.0，Swift 开源以来的第一个主要版本，现在已经正式发布！Swift 3 是一个重大的发布版本，其中包含对核心语言和标准库的重要改动和精炼，对 Swift 在 Linux 上移植版的主要补充，以及 [Swift 软件包管理器](https://swift.org/package-manager)的第一个正式发布版。
 
 ### 语言改变
 
