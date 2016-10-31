@@ -5,6 +5,12 @@ Swift.org blog articles in Chinese
 
 ### 2016
 
+##### 9 月
+
+* [Swift 3.0 现已发布！][swift-3-0-released] (9/13/2016)
+
+[swift-3-0-released]: ./2016/09/swift-3-0-released.md
+
 ##### 7 月
 
 * [Xcode Playground 支持][swift-xcode-playground-support] (7/7/2016)
