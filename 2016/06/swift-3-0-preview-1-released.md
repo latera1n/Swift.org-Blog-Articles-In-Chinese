@@ -41,7 +41,7 @@
 * [SE-0053：移除函数参数中显式使用的 `let`](https://github.com/apple/swift-evolution/blob/master/proposals/0053-remove-let-from-function-parameters.md)
 * [SE-0054：废除 `ImplicitlyUnwrappedOptional` 类型](https://github.com/apple/swift-evolution/blob/master/proposals/0054-abolish-iuo.md)
 * [SE-0055：用可选类型以明显不安全指针的为空性](https://github.com/apple/swift-evolution/blob/master/proposals/0055-optional-unsafe-pointers.md)
-* [SE-0057：导入 Objective-C 的 轻量级范型](https://github.com/apple/swift-evolution/blob/master/proposals/0057-importing-objc-generics.md)
+* [SE-0057：导入 Objective-C 的轻量级范型](https://github.com/apple/swift-evolution/blob/master/proposals/0057-importing-objc-generics.md)
 * [SE-0059：更新 API 命名指导方针并相应地重写设值 API](https://github.com/apple/swift-evolution/blob/master/proposals/0059-updated-set-apis.md)
 * [SE-0061：新增范型结果和错误处理至 autoreleasepool()](https://github.com/apple/swift-evolution/blob/master/proposals/0061-autoreleasepool-signature.md)
 * [SE-0062：引用 Objective-C 中的键路径](https://github.com/apple/swift-evolution/blob/master/proposals/0062-objc-keypaths.md)
