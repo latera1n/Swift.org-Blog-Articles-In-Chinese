@@ -5,7 +5,7 @@ Swift.org blog articles in Chinese
 
 ### 2016
 
-##### 9 月
+##### 10 月
 
 * [Swift 3 中的模块整体优化][whole-module-optimizations] (10/21/2016)
 
