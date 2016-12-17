@@ -7,6 +7,12 @@ Swift.org blog articles in Chinese
 
 ##### 9 月
 
+* [Swift 3 中的模块整体优化][whole-module-optimizations] (10/21/2016)
+
+[whole-module-optimizations]: ./2016/10/whole-module-optimizations.md
+
+##### 9 月
+
 * [Swift 3.0 现已发布！][swift-3-0-released] (9/13/2016)
 
 [swift-3-0-released]: ./2016/09/swift-3-0-released.md
