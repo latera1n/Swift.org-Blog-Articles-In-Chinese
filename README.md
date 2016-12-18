@@ -7,8 +7,10 @@ Swift.org blog articles in Chinese
 
 ##### 10 月
 
+* [服务器 API 工作组][server-api-workgroup] (10/25/2016)
 * [Swift 3 中的模块整体优化][whole-module-optimizations] (10/21/2016)
 
+[server-api-workgroup]: ./2016/10/server-api-workgroup.md
 [whole-module-optimizations]: ./2016/10/whole-module-optimizations.md
 
 ##### 9 月
