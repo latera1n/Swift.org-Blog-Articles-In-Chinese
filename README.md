@@ -6,6 +6,7 @@ Swift.org blog articles in Chinese
 ### 2016
 
 ##### 12 月
+
 * [Swift 3.1 发布进程][swift-3-1-release-process] (12/9/2016)
 
 [swift-3-1-release-process]: ./2016/12/swift-3-1-release-process.md
