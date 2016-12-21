@@ -5,8 +5,12 @@ Swift.org blog articles in Chinese
 
 ### 2016
 
-##### 10 月
+##### 12 月
+* [Swift 3.1 发布进程][swift-3-1-release-process] (12/9/2016)
 
+[swift-3-1-release-process]: ./2016/12/swift-3-1-release-process.md
+
+##### 10 月
 * [服务器 API 工作组][server-api-workgroup] (10/25/2016)
 * [Swift 3 中的模块整体优化][whole-module-optimizations] (10/21/2016)
 
@@ -14,13 +18,11 @@ Swift.org blog articles in Chinese
 [whole-module-optimizations]: ./2016/10/whole-module-optimizations.md
 
 ##### 9 月
-
 * [Swift 3.0 现已发布！][swift-3-0-released] (9/13/2016)
 
 [swift-3-0-released]: ./2016/09/swift-3-0-released.md
 
 ##### 7 月
-
 * [Xcode Playground 支持][swift-xcode-playground-support] (7/7/2016)
 
 [swift-xcode-playground-support]: ./2016/07/swift-xcode-playground-support.md

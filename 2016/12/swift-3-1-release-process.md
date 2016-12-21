@@ -6,13 +6,13 @@
 
 这篇文章描述了 Swift 3.1 的目标、发布过程以及预估的时间表。
 
-Swift 3.1 旨在与 Swift 3.0 [源码兼容](https://swift.org/blog/swift-3-1-release-process/#source-compatibility)。它将包含对核心语言的一些附加增强，以及对 Swift 软件包管理器、Linux 上的 Swift 以及对编译器和标准库的一般质量改进的改善。
+Swift 3.1 旨在与 Swift 3.0 [源码兼容](https://swift.org/blog/swift-3-1-release-process/#source-compatibility)。它将包含对核心语言的一些附加增强，以及对 Swift 软件包管理器、Linux 上的 Swift 以及对编译器和标准库的一般质量改进等改善。
 
-Swift 3.1 将预定于在 2017 年春季发布。
+Swift 3.1 预定于在 2017 年春季发布。
 
 ## 源码兼容性
 
-源码兼容性是一个强大的目标，即继续使用 Swift 3.1 编译器构建那些使用 Swift 3.0 编译器构建的绝大多数源代码。有一个例外将是编译器 bug 的修复，这将导致编译器拒绝那些本来就不应该被接受的代码。而这些案例在实践中是相对罕见的。
+源码兼容性是一个宏大的目标，即继续使用 Swift 3.1 编译器构建那些使用 Swift 3.0 编译器构建的绝大多数源代码。而有一个例外是编译器的错误修复，这将导致编译器拒绝那些本来就不应该被接受的代码。而这些案例在实践中是相对罕见的。
 
 有关 Swift 版本的源码兼容性的意图的描述可以在 [swift-evolution](https://lists.swift.org/mailman/listinfo/swift-evolution) 邮件列表上的一个[帖子](https://lists.swift.org/pipermail/swift-evolution/Week-of-Mon-20161128/029099.html)中找到。
 
@@ -20,33 +20,33 @@ Swift 3.1 将预定于在 2017 年春季发布。
 
 ## Swift 3.1 的快照
 
-以前的版本的 Swift 已有“开发人员预览”，例如“预览1”、“预览2”等，它们代表 Swift 版本在开始汇集时的稳定快照。开发者预览经常是有不规则间隔的，有时没有为 Swift 社区提供足够的粒度去尝试其中的新功能或是验证这个版本在汇集时的错误修复。
+以前版本的 Swift 已有“开发人员预览”，例如“预览1”、“预览2”等，它们代表 Swift 版本在开始汇集时的稳定快照。开发者预览经常是有不规则时间间隔的，因此有时没有为 Swift 社区提供足够的粒度去尝试其中的新功能或是验证这个版本在汇集时的错误修复。
 
-而对于 Swift 3.1，取而代之的将会是发布分支中每日可下载的快照。快照将作为[持续集成](https://ci.swift.org/)测试的一部分生成。因此，可下载快照的节奏将会变得更频繁且粒度更高的。假设测试通过，快照将于每天发布。
+而对于 Swift 3.1，取而代之的将会是发布分支中每日可下载的快照。快照将作为[持续集成](https://ci.swift.org/)测试的一部分生成。因此，可下载快照的节奏将会变得更频繁且粒度更高。假设测试通过，快照将于每天发布。
 
 一旦 Swift 3.1 正式发布，除了快照之外，还将发布官方最终版本。
 
 ## 把改进带入 Swift 3.1
 
-Swift 3.1 旨在提供一个有限范围更改的版本，并希望在 2017 年初将重点转移到 Swift 4 的开发。为了实现这一目标，Swift 3.1 将仅包括 1 月 16 日之前的主线开发（例如 `master` 分支）中的更改。在那之后，将有一个“烘焙”期间，其中只有经过挑选的、关键的修复将进入 `swift-3.1-branch`，且 `master` 分支将会被移动到 Swift 4 的开发中。
+Swift 3.1 旨在提供一个有限范围更改的版本，并希望在 2017 年初将重点转移到 Swift 4 的开发。为了实现这一目标，Swift 3.1 将仅包括 1 月 16 日之前的主线开发（即 `master` 分支）中的更改。在那之后将有一个“烘焙”时期，其间只有经过挑选的、关键的修复才会进入 `swift-3.1-branch` 分支，且 `master` 分支将会被分配到 Swift 4 的开发中。
 
 ### 分支
 
-* __master__：除了 [swift-llvm](https://github.com/apple/swift-llvm) 和 [swift-clang](https://github.com/apple/swift-clang) 代码仓库（参见[受影响的代码仓库](#受影响的代码仓库)）的例外，Swift 3.1 的开发将在 `master` 分支中进行。在 `master` 分支中的所有更改将成为 Swift 3.1 最终版本的一部分，直到 1 月 16 日。在那之后 `master` 分支将跟踪 Swift 4 的开发工作。
+* __master__：除了 [swift-llvm](https://github.com/apple/swift-llvm) 和 [swift-clang](https://github.com/apple/swift-clang) 代码仓库（参见[受影响的代码仓库](#受影响的代码仓库)）的例外情况，Swift 3.1 的开发将在 `master` 分支中进行。在 `master` 分支中的所有更改将成为 Swift 3.1 最终版本的一部分，直到 1 月 16 日。在那之后 `master` 分支将被用来跟踪 Swift 4 的开发工作。
 
 * __swift-3.1-branch__：Swift 3.1 的发布管理发生将在 `swift-3.1-branch` 分支上。所有 Swift 3.1 的快照都是从这个分支创建的，Swift 3.1 也将从这个分支产生 GM 版本。
 
-在操作上，`master` 分支将被定期合并到 `swift-3.1-branch` 分支中，大约每两周一次，直到1月16日。两周的窗口为 `master` 分支中的热开发和策划发布分支之间提供了一个缓冲区。在 `master` 分支的每次分支合并之间，其中的更改可以被遴选（通过拉取请求）到 `swift-3.1-branch` 分之中。
+在操作上，`master` 分支将被定期合并到 `swift-3.1-branch` 分支中，大约每两周一次，直到1月16日。两周的窗口为 `master` 分支中的热开发和策划发布分支之间提供了一个缓冲区。在 `master` 分支的每次分支合并之间，其中的更改可以被遴选（通过拉取请求）到 `swift-3.1-branch` 分支中。
 
 这个计划的一个显著的例外是 [swift-package-manager](https://github.com/apple/swift-package-manager) 代码仓库，它将每天从 `master` 分支合并新的更改到 `swift-3.1-branch` 分支。
 
 ### 把更改带入 Swift 3.1 的理念
 
-* 与 Swift 3.0 源代码兼容拥有首要的优先权。
+* 与 Swift 3.0 源码兼容拥有首要的优先权。
 
 * 当 Swift 3.1 汇集后，只会考虑与发布的核心目标一致的更改。
 
-* Swift 3.1 中的所有语言和 API 方面的更改都将通过 [Swift 演进](https://github.com/apple/swift-evolution)过程。
+* Swift 3.1 中的所有语言和 API 方面的更改都将经历 [Swift 演进](https://github.com/apple/swift-evolution)过程。
 
 * Swift 3.1 的主要工作应围绕 1 月 16 日的日期进行，但之后仍可以经发布经理判断后，将改动带入 Swift 3.1。随着发布版本的汇集，将更改拉入到 Swift 3.1 的标准将变得越来越受限。
 
@@ -65,7 +65,7 @@ Swift 3.1 旨在提供一个有限范围更改的版本，并希望在 2017 年�
 * [swift-llvm](https://github.com/apple/swift-llvm)
 * [swift-clang](https://github.com/apple/swift-clang)
 
-请注意，[swift-llvm](https://github.com/apple/swift-llvm) 和 [swift-clang](https://github.com/apple/swift-clang) 代码仓库已经从 `master` 分支创建了分支 `swift-3.1-branch`，并且不会再次重新创建此分支。
+请注意，[swift-llvm](https://github.com/apple/swift-llvm) 和 [swift-clang](https://github.com/apple/swift-clang) 代码仓库已经从 `master` 分支创建了 `swift-3.1-branch` 分支，并且不会再次重新创建此分支。
 
 ## 发布经理
 
