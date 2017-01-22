@@ -3,6 +3,14 @@ Swift.org blog articles in Chinese
 
 ## 博客文章列表
 
+### 2017
+
+##### 1 月
+
+* [Swift 演进过程状态页面现已可用][swift-evolution-status-page] (1/18/2017)
+
+[swift-evolution-status-page]: ./2017/01/swift-evolution-status-page.md
+
 ### 2016
 
 ##### 12 月
