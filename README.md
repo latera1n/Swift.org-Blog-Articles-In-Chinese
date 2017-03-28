@@ -5,6 +5,12 @@ Swift.org blog articles in Chinese
 
 ### 2017
 
+##### 2 月
+
+* [Swift 4.0 发布进程][swift-4-0-release-process] (2/16/2017)
+
+[swift-4-0-release-process]: ./2017/02/swift-4-0-release-process.md
+
 ##### 1 月
 
 * [使用预编译的桥接头文件以获得更快速的混合匹配构建][bridging-pch] (1/26/2017)
