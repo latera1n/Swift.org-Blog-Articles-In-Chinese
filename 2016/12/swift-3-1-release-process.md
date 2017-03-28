@@ -36,7 +36,7 @@ Swift 3.1 旨在提供一个有限范围更改的版本，并希望在 2017 年�
 
 * __swift-3.1-branch__：Swift 3.1 的发布管理发生将在 `swift-3.1-branch` 分支上。所有 Swift 3.1 的快照都是从这个分支创建的，Swift 3.1 也将从这个分支产生 GM 版本。
 
-在操作上，`master` 分支将被定期合并到 `swift-3.1-branch` 分支中，大约每两周一次，直到1月16日。两周的窗口为 `master` 分支中的热开发和策划发布分支之间提供了一个缓冲区。在 `master` 分支的每次分支合并之间，其中的更改可以被遴选（通过拉取请求）到 `swift-3.1-branch` 分支中。
+在操作上，`master` 分支将被定期合并到 `swift-3.1-branch` 分支中，大约每两周一次，直到 1 月 16 日。两周的窗口为 `master` 分支中的热开发和策划发布分支之间提供了一个缓冲区。在 `master` 分支的每次分支合并之间，其中的更改可以被遴选（通过拉取请求）到 `swift-3.1-branch` 分支中。
 
 这个计划的一个显著的例外是 [swift-package-manager](https://github.com/apple/swift-package-manager) 代码仓库，它将每天从 `master` 分支合并新的更改到 `swift-3.1-branch` 分支。
 
