@@ -62,3 +62,35 @@ Swift 3.1 为所有数字类型添加了一系列新的转换初始值，使其�
 * JSON 序列化增强的性能
 * `NSUUID`，`NSURLComponents` 及其他中的内存泄漏的修复
 * 增强的了测试覆盖，特别是在 `URLSession` 中
+
+### 软件包管理器的更新
+
+#### 可编辑的软件包
+
+默认情况下，软件包依赖关系存储在由工具管理的构建目录中，并且新的 `swift package edit` 命令允许用户在软件包上“开始编辑”，这将使用户获得对其的控制（进入 `Package` 目录）、免除依赖关系的更新、并允许用户提交并推送对该包的更改。
+
+查看更多：[SE-0082: 软件包管理器的可编辑软件包](https://github.com/apple/swift-evolution/blob/master/proposals/0082-swiftpm-package-edit.md)
+
+#### 版本的钉固
+
+你使用的每个依赖关系的版本现在将被记录在一个 `Package.pins` 文件中，你可以登记以便与软件包的其他用户共享这些版本。`swift package pin` 和 `swift package unpin` 命令提供了进一步的控制。解决依赖关系时，默认情况下会获取软件包依赖关系的固定版本，但是 `swift package update` 命令将会重新解析为这些依赖关系的最新允许版本，并更新钉固文件。
+
+查看更多：[SE-0145: 软件包管理器版本的钉固](https://github.com/apple/swift-evolution/blob/master/proposals/0145-package-manager-version-pinning.md)
+
+#### 工具的版本
+
+软件包现在可以指定所需的 Swift 工具的最低版本。 可以使用 `swift package tools-version` 命令编辑此要求，并记录在 `Package.swift` 清单的顶部。需要 Swift 工具的软件包的更新的版本将在依赖关系解析时所忽略，因此软件包可以采用新的 Swift 功能，而不会破坏正在使用旧版 Swift 工具的客户端。 所需工具的最低版本决定了哪个 Swift 语言版本用于解释 `Package.swift` 清单，以及哪个版本的 `PackageDescription` API 可用。
+
+查看更多：[SE-0152: 软件包管理器工具版本](https://github.com/apple/swift-evolution/blob/master/proposals/0152-package-manager-tools-version.md)
+
+#### Swift 语言的兼容性版本
+
+软件包现在可以指定它们其中的源代码是以 Swift 3 或 Swift 4 语言版本编写的。如果未指定，则从软件包的最小 Swift 工具版本推断出默认值。
+
+查看更多：[SE-0151: 软件包管理器 Swift 语言的兼容性版本](https://github.com/apple/swift-evolution/blob/master/proposals/0152-package-manager-tools-version.md)
+
+#### 其他软件包管理器的提升
+
+* 在以前可能已被解析为不正确的依赖关系的一些情况下，软件包依赖解关系的析现在已经被修正。现在，依赖关系周期将在构建时期被检测，并且增量构建将重新构建尽可能少的源代码。
+
+* `swift test` 命令现在支持使用 `--parallel` 标志来并行地运行测试。`swift build`，`swift test` 以及 `swift package` 等解析依赖关系的所有命令现在支持使用 `--enable-prefetching` 标志来并行获取这些依赖关系。
