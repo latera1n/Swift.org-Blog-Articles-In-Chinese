@@ -104,7 +104,7 @@ Swift 3.0 是一个主要的语言版本。它不能与 Swift 2.2 和 2.3 在源
 
 Swift 3 是一个具有代码破坏性的发布版，其主要原因是 [SE-0005](https://github.com/apple/swift-evolution/blob/master/proposals/0005-objective-c-name-translation.md) 和 [SE-0006](https://github.com/apple/swift-evolution/blob/master/proposals/0006-apply-api-guidelines-to-the-standard-library.md) 中的更改。这些更改不仅影响到标准库的 API 名称，而且还包括有关 Objective-C API（特别是来自 Cocoa 的那些）如何导入到 Swift 中的彻底更改。许多更改在很大程度上是机械的，但是它们可能大量地存在于一个典型的 Swift 项目中。
 
-为了帮助你移动到 Swift 3，Xcode 8.0 包含了一个代码迁移器，可以自动处理许多需要改变源代码的更改。我们还提供了一个迁移指南，可以指导你完成许多更改——特别是帮你完成那些不是很机械的且需要更多直接审查的更改。
+为了帮助你移动到 Swift 3，[Xcode 8.0](https://itunes.apple.com/app/xcode/id497799835) 包含了一个代码迁移器，可以自动处理许多需要改变源代码的更改。我们还提供了一个[迁移指南](https://swift.org/migration-guide/)，可以指导你完成许多更改——特别是帮你完成那些不是很机械的且需要更多直接审查的更改。
 
 ### 文档
 
