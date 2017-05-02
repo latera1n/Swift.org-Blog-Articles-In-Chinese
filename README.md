@@ -6,7 +6,7 @@ Swift.org blog articles in Chinese
 ### 2017
 
 ##### 3 月
-* [Swift 3.1 现已发布！][swift-3-1-released] (3／27/2017)
+* [Swift 3.1 现已发布！][swift-3-1-released] (3/27/2017)
 
 [swift-3-1-released]: ./2017/03/swift-3-1-released.md
 
