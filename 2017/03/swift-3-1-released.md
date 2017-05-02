@@ -99,8 +99,7 @@ Swift 软件包管理器的相关文档可以[在代码仓库中](https://github
 
 ### 迁移到 Swift 3.1
 
-Swift 3.1 与 Swift 3.0 源兼容。为了帮助从早期版本的 Swift 迁移到 Swift 3.1，Xcode 8.3 包含一个代码迁移器，可以自动处理许多所需的源代码的更改。还有一个[迁移指南](https://swift.org/migration-guide/)可用于指导您完成许多更改——特别是对于一些不是很机械性的并需要更直观的检查的源代码。
-
+Swift 3.1 与 Swift 3.0 源兼容。为了帮助你移动到 Swift 3.1，[Xcode 8.3](https://itunes.apple.com/app/xcode/id497799835) 包含了一个代码迁移器，可以自动处理许多需要改变源代码的更改。我们还提供了一个[迁移指南](https://swift.org/migration-guide/)，可以指导你完成许多更改——特别是帮你完成那些不是很机械的且需要更多直接审查的更改。
 
 ### 文档
 
@@ -138,6 +137,6 @@ Swift 3.1 的开发是通过以下在 Github 上代码仓库的 `swift-3.1-branc
 `swift-3.1-branch` 分支将继续开放——但在同样的[发布管理过程](https://swift.org/blog/swift-3-0-release-process/)下——以累积更改以用于在将来潜在的，作为漏洞修复的“点”版本发布。
 
 <br />
-<sub>Original article: [https://swift.org/blog/swift-3-1-released/](https://swift.org/blog/swift-3-1-released/)</sub>
+<sub>Original article: <a href="https://swift.org/blog/swift-3-1-released/">https://swift.org/blog/swift-3-1-released/</a>(</sub>
 
 <sup>Original article copyright © 2017 Apple Inc. All rights reserved. Swift and the Swift logo are trademarks of Apple Inc.</sup>
