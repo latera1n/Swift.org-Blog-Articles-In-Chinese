@@ -137,6 +137,6 @@ Swift 3.1 的开发是通过以下在 Github 上代码仓库的 `swift-3.1-branc
 `swift-3.1-branch` 分支将继续开放——但在同样的[发布管理过程](https://swift.org/blog/swift-3-0-release-process/)下——以累积更改以用于在将来潜在的，作为漏洞修复的“点”版本发布。
 
 <br />
-<sub>Original article: <a href="https://swift.org/blog/swift-3-1-released/">https://swift.org/blog/swift-3-1-released/</a>(</sub>
+<sub>Original article: <a href="https://swift.org/blog/swift-3-1-released/">https://swift.org/blog/swift-3-1-released/</a></sub>
 
 <sup>Original article copyright © 2017 Apple Inc. All rights reserved. Swift and the Swift logo are trademarks of Apple Inc.</sup>
