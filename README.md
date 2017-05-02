@@ -5,6 +5,11 @@ Swift.org blog articles in Chinese
 
 ### 2017
 
+##### 3 月
+* [Swift 3.1 现已发布！][swift-3-1-released] (3／27/2017)
+
+[swift-3-1-released]: ./2017/03/swift-3-1-released.md
+
 ##### 2 月
 
 * [Swift 4.0 发布进程][swift-4-0-release-process] (2/16/2017)
@@ -90,9 +95,9 @@ Swift.org blog articles in Chinese
 [swift-linux-port]: ./2015/12/swift-linux-port.md
 [welcome]: ./2015/12/welcome.md
 
-## 许可证/License
-* [Swift.org 的 Apache 2.0 许可证/The original license from Swift.org][original-license]
-* [本项目的 MIT 许可证/MIT License for this project][license]
+<br/>
 
-[original-license]: ./Swift.org-original-LICENSE
-[license]: ./LICENSE
+### 许可证/License
+除非另外注明，原 swift.org 博客上和此代码仓库中的所有内容都在 [CC BY 4.0 许可协议](https://creativecommons.org/licenses/by/4.0/deed.zh)下授权。
+
+Except where otherwise noted, all content on the original [swift.org blog](https://swift.org/blog/) and in this repository is licensed under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/).
