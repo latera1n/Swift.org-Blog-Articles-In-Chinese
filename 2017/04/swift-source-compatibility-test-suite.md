@@ -6,7 +6,7 @@
 
 我们很高兴地宣布一个新的 [Swift 源代码兼容性测试套件](https://github.com/apple/swift-source-compat-suite)的发布，来作为未来 Swift 版本中维护源代码兼容性的一部分。
 
-源代码兼容性测试套件是由社区驱动的，意味着开源项目所有者可以提交他们的项目以包含在套件中。有关将开源项目添加到测试套件的说明，请参见 Swift.org 的 [Swift Source 兼容性](https://swift.org/source-compatibility)部分。
+源代码兼容性测试套件是由社区驱动的，意味着开源项目所有者可以提交他们的项目以包含在套件中。有关将开源项目添加到测试套件的说明，请参见 Swift.org 的 [Swift 源代码兼容性](https://swift.org/source-compatibility)部分。
 
 [Swift 的持续集成系统](https://ci.swift.org/)会定期在 Swift 的开发版本中定期构建套件中的项目，以尽快捕获源代码的兼容性回归。
 
