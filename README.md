@@ -5,6 +5,11 @@ Swift.org blog articles in Chinese
 
 ### 2017
 
+##### 4 月
+* [Swift 源代码兼容性测试套件现已可用][swift-source-compatibility-test-suite] (4/24/2017)
+
+[swift-source-compatibility-test-suite]: ./2017/04/swift-source-compatibility-test-suite.md
+
 ##### 3 月
 * [Swift 3.1 现已发布！][swift-3-1-released] (3/27/2017)
 
