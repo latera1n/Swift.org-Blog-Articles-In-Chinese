@@ -5,12 +5,20 @@ Swift.org blog articles in Chinese
 
 ### 2017
 
+##### 6 月
+
+* [Swift 软件包管理器的 Manifest 配置文件 API 设计][swift-package-manager-manifest-api-redesign.md] (6/21/2017)
+
+[swift-package-manager-manifest-api-redesign.md]: ./2017/06/swift-package-manager-manifest-api-redesign.md
+
 ##### 4 月
+
 * [Swift 源代码兼容性测试套件现已可用][swift-source-compatibility-test-suite] (4/24/2017)
 
 [swift-source-compatibility-test-suite]: ./2017/04/swift-source-compatibility-test-suite.md
 
 ##### 3 月
+
 * [Swift 3.1 现已发布！][swift-3-1-released] (3/27/2017)
 
 [swift-3-1-released]: ./2017/03/swift-3-1-released.md
