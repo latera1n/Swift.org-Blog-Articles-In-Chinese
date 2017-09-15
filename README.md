@@ -7,7 +7,7 @@ Swift.org blog articles in Chinese
 
 ##### 6 月
 
-* [Swift 软件包管理器的 Manifest 配置文件 API 设计][swift-package-manager-manifest-api-redesign.md] (6/21/2017)
+* [Swift 软件包管理器的 Manifest 配置文件 API 重新设计][swift-package-manager-manifest-api-redesign.md] (6/21/2017)
 
 [swift-package-manager-manifest-api-redesign.md]: ./2017/06/swift-package-manager-manifest-api-redesign.md
 

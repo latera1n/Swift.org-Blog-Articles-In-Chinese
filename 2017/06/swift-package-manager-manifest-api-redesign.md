@@ -1,4 +1,4 @@
-# Swift 软件包管理器的 Manifest 配置文件 API 设计
+# Swift 软件包管理器的 Manifest 配置文件 API 重新设计
 
 [阅读原文>>](https://swift.org/blog/swift-package-manager-manifest-api-redesign/)
 
