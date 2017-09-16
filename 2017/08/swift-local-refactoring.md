@@ -52,14 +52,14 @@ Xcode 9 包括一个全新的重构引擎。它既可以在局部的单个 Swift
 两个声明都是从上述的条目自动生成的。要实现（1），我们需要在 [Refactoring.cpp](https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/lib/IDE/Refactoring.cpp) 中实现 `RefactoringActionLocalizeString` 的 [isApplicable](isApplicable) 函数，如下所示：
 
 >```c++
->bool RefactoringActionLocalizeString::
->isApplicable(ResolvedCursorInfo CursorInfo) {
->  if (CursorInfo.Kind == CursorInfoKind::ExprStart) {
->    if (auto *Literal = dyn_cast<StringLiteralExpr>(CursorInfo.TrailingExpr) {
->      return !Literal->hasInterpolation(); // 非现实的 API。
->    }
->  }
->}
+> bool RefactoringActionLocalizeString::
+> isApplicable(ResolvedCursorInfo CursorInfo) {
+>   if (CursorInfo.Kind == CursorInfoKind::ExprStart) {
+>     if (auto *Literal = dyn_cast<StringLiteralExpr>(CursorInfo.TrailingExpr) {
+>       return !Literal->hasInterpolation(); // 非真实 API。
+>     }
+>   }
+> }
 >```
 
 使用 [ResolvedCursorInfo](ResolvedCursorInfo) 对象作为输入，检查何时使用 "本地化字符串" 填充可用的重构菜单几乎是琐碎无用的。在这种情况下，只要检查光标是否指向表达式的开始（第 3 行），并且表达式是没有被插入文字（第 5 行）的字符串文字（第 4 行）就足够了。
@@ -67,12 +67,12 @@ Xcode 9 包括一个全新的重构引擎。它既可以在局部的单个 Swift
 接下来，我们需要实现如果重构动作再被应用时，应该如何更改光标处的代码。为此，我们必须实现 `RefactoringActionLocalizeString` 的 [performChange](https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/lib/IDE/Refactoring.cpp#L599) 方法。在 `performChange` 的实现中，我们可以访问也被 [isApplicable](isApplicable) 接受的同一个 `ResolvedCursorInfo` 对象。
 
 >```c++
->bool RefactoringActionLocalizeString::
->performChange() {
->  EditConsumer.insert(SM, Cursor.TrailingExpr->getStartLoc(), "NSLocalizedString(");
->  EditConsumer.insertAfter(SM, Cursor.TrailingExpr->getEndLoc(), ", comment: \"\")");
->  return false; // 返回 true 如果放弃了代码更改。
->}
+> bool RefactoringActionLocalizeString::
+> performChange() {
+>   EditConsumer.insert(SM, Cursor.TrailingExpr->getStartLoc(), "NSLocalizedString(");
+>   EditConsumer.insertAfter(SM, Cursor.TrailingExpr->getEndLoc(), ", comment: \"\")");
+>   return false; // 如果放弃了代码更改则返回 true。
+> }
 >```
 
 仍然使用字符串本地化作为示例，[performChange](https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/lib/IDE/Refactoring.cpp#L599) 功能实现起来相当简单。在函数体中，我们可以使用 [EditConsumer](https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/include/swift/IDE/Utils.h#L506)，通过适当的 Foundation API 调用来围绕光标指向的表达式进行文本编辑，如第 3 和第 4 行所示。
