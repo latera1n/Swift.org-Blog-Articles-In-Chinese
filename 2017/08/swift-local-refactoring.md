@@ -42,7 +42,7 @@ Xcode 9 包括一个全新的重构引擎。它既可以在局部的单个 Swift
 > CURSOR_REFACTORING(LocalizeString, "Localize String", localize.string)
 > ```
 
-`CURSOR_REFACTORING` 指定了这个重构操作是在光标位置初始化的，由此在实现中将可使用 [ResolvedCursorInfo](https://github.com/apple/swift/blob/7f29b362d68eb990a592257850aabadb24de61df/include/swift/IDE/Utils.h#L158)。第一个字段 `LocalizeString` 在 Swift 代码库中指定了这个重构操作的内部名称。在此示例中，与此重构相对应的类的名称为 `RefactoringActionLocalizeString`。字符串文字 `"Localize String"` 是在 UI 中向用户显示的这个重构操作的显示名称。最后，"localize.string" 是一个稳定的，用于表示重构操作的键名，Swift 工具链用其与源代码编辑器通信。此条目还允许 C ++ 编译器为 String 局部重构及其调用者生成类的存根。由此，我们可以专注于实现所需的功能。
+`CURSOR_REFACTORING` 指定了这个重构操作是在光标位置初始化的，由此在实现中将可使用 [ResolvedCursorInfo](https://github.com/apple/swift/blob/7f29b362d68eb990a592257850aabadb24de61df/include/swift/IDE/Utils.h#L158)。第一个字段 `LocalizeString` 在 Swift 代码库中指定了这个重构操作的内部名称。在此示例中，与此重构相对应的类的名称为 `RefactoringActionLocalizeString`。字符串文字 `"Localize String"` 是在 UI 中向用户显示的这个重构操作的显示名称。最后，"localize.string" 是一个稳定的，用于表示重构操作的键名，Swift 工具链用其与源代码编辑器通信。此条目还允许 C++ 编译器为 String 局部重构及其调用者生成类的存根。由此，我们可以专注于实现所需的功能。
 
 在指定这个条目后，我们需要实现两个函数来教授 Xcode：
 
@@ -76,3 +76,73 @@ Xcode 9 包括一个全新的重构引擎。它既可以在局部的单个 Swift
 >```
 
 仍然使用字符串本地化作为示例，[performChange](https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/lib/IDE/Refactoring.cpp#L599) 功能实现起来相当简单。在函数体中，我们可以使用 [EditConsumer](https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/include/swift/IDE/Utils.h#L506)，通过适当的 Foundation API 调用来围绕光标指向的表达式进行文本编辑，如第 3 和第 4 行所示。
+
+## 基于范围的重构
+
+![基于位置的重构](https://swift.org/assets/images/local-refactoring/Range.png)
+
+如上图所示，通过在 Swift 源文件中选择连续的代码范围来启动基于范围的重构。以*提取表达式*重构的实现为例，我们首先需要在 [RefactoringKinds.def](https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/include/swift/IDE/RefactoringKinds.def) 中声明以下项目。
+
+> ```c++
+> RANGE_REFACTORING(ExtractExpr, "Extract Expression", extract.expr)
+> ```
+
+此条目声明提取表达式重构由范围选择启动，范围选择以 `ExtractExpr` 内部命名，使用 `"Extract Expression"` 作为显示名称，并使用 “extract.expr” 作为稳定的键名用于服务通信的目的。
+
+为了告诉 Xcode 在什么时候个重构应该是可用的，我们还需要在 [Refactoring.cpp](https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/lib/IDE/Refactoring.cpp) 中实现对于这个重构的 [isApplicable](https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/lib/IDE/Refactoring.cpp#L646)，稍微不同的是，这里的输入是 [ResolvedRangeInfo](https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/include/swift/IDE/Utils.h#L344) 而不是 [ResolvedCursorInfo](https://github.com/apple/swift/blob/7f29b362d68eb990a592257850aabadb24de61df/include/swift/IDE/Utils.h#L158)。
+
+>```c++
+> bool RefactoringActionExtractExpr::
+> isApplicable(ResolvedRangeInfo Info) {
+>   if (Info.Kind != RangeKind::SingleExpression)
+>     return false;
+>   auto Ty = Info.getType();
+>   if (Ty.isNull() || Ty.hasError())
+>     return false;
+>   ...
+>   return true;
+> }
+>```
+
+虽然这里比上述字符串本地化重构中的对应例子复杂一些，但这种实现也是能够自我解释的。第 3 至第 4 行检查给定范围的种类，其必须是单个表达式才能进行提取。第 5 至 7 行确保提取的表达是符合语法规则形式的，现在暂时忽略例子中的需要检查的其他条件。有兴趣的读者可以参考 [Refactoring.cpp](https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/lib/IDE/Refactoring.cpp) 了解更多细节。对于代码更改的部分，我们可以使用相同的 [ResolvedRangeInfo](https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/include/swift/IDE/Utils.h#L344) 实例来发出文本编辑操作：
+
+>```c++
+> bool RefactoringActionExtractExprBase::performChange() {
+>   llvm::SmallString<64> DeclBuffer;
+>   llvm::raw_svector_ostream OS(DeclBuffer);
+>   OS << tok::kw_let << " ";
+>   OS << PreferredName;
+>   OS << TyBuffer.str() <<  " = " << RangeInfo.ContentRange.str() << "\n";
+>   Expr *E = RangeInfo.ContainedNodes[0].get<Expr*>();
+>   EditConsumer.insert(SM, InsertLoc, DeclBuffer.str());
+>   EditConsumer.insert(SM,
+>                       Lexer::getCharSourceRangeFromSourceRange(SM, E->getSourceRange()),
+>                       PreferredName)
+>   return false; // 如果放弃了代码更改则返回 true。
+> }
+>```
+
+第 2 至第 6 行构建了一个局部变量的声明，和该提取操作下的表达式的初始化值，例如 `let extractExpr = foo()`。第 8 行将声明插入本地上下文中的正确的源位置，第 9 行使用新变量表达式的引用替换了在原始位置出现的引用。如代码示例所示，在 [performChange](https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/lib/IDE/Refactoring.cpp#L599) 的函数体内，我们不仅可以访问用户选择的原始 [ResolvedRangeInfo](https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/include/swift/IDE/Utils.h#L344)，还可以访问其他重要的实用程序，比如编辑消费者和源代理管理器，使实现更加方便。
+
+## 诊断
+
+由于各种原因，自动代码更改期间可能需要中止重构操作。当这种情况发生时，重构实现可以通过诊断将这种故障的原因传达给用户。重构诊断使用与编译器本身相同的机制，以重命名重构为例，如果给定的新名称是无效的 Swift 标识符，我们将发出一条错误消息。为了实现这个诊断，我们首先需要在 [DiagnosticsRefactoring.def](https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/include/swift/AST/DiagnosticsRefactoring.def) 中为诊断声明以下条目。
+
+>```c++
+> ERROR(invalid_name, none, "'%0' is not a valid name", (StringRef))
+>```
+
+在声明之后，我们可以使用 [isApplicable](https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/lib/IDE/Refactoring.cpp#L646) 或 [performChange](https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/lib/IDE/Refactoring.cpp#L599) 中的诊断。对于*本地重命名*重构，在 [Refactoring.cpp](https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/lib/IDE/Refactoring.cpp) 中发出诊断将类似这样：
+
+>```c++
+> bool RefactoringActionLocalRename::performChange() {
+> ...
+>   if (!DeclNameViewer(PreferredName).isValid()) {
+>     DiagEngine.diagnose(SourceLoc(), diag::invalid_name, PreferredName);
+>     return true; // 如果放弃了代码更改则返回 true。
+>   }
+> ...
+> }
+>```
+
+## 测试
