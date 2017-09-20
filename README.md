@@ -5,6 +5,12 @@ Swift.org blog articles in Chinese
 
 ### 2017
 
+##### 8 月
+
+* [Swift 本地重构][swift-local-refactoring.md] (8/22/2017)
+
+[swift-local-refactoring.md]: ./2017/08/swift-local-refactoring.md
+
 ##### 6 月
 
 * [Swift 软件包管理器的 Manifest 配置文件 API 重新设计][swift-package-manager-manifest-api-redesign.md] (6/21/2017)
