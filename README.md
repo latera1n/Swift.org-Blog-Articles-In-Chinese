@@ -5,6 +5,11 @@ Swift.org blog articles in Chinese
 
 ### 2017
 
+##### 9 月
+* [Swift 4.0 现已发布！][swift-4-0-released] (9/19/2017)
+
+[swift-4-0-released]: ./2017/09/swift-4-0-released.md
+
 ##### 8 月
 
 * [Swift 本地重构][swift-local-refactoring.md] (8/22/2017)
