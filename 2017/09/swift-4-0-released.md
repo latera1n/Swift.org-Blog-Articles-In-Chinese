@@ -81,7 +81,7 @@ Swift 4 为 Swift 软件包管理器引入了新的工作流功能和更完整�
 * 在标记您的第一个正式版本之前，您可以轻松同时开发多个软件包，或者在多个软件包的分支上一起工作。
 * 软件包产品已经正式化，使控制软件包发布给客户哪一个库成为可能。
 * 新的软件包 API 允许软件包指定一些新的设置，使软件包的作者能够更好地控制软件包的构建方式，以及如何在硬盘上组织安排源代码。总的来说，用于创建软件包的 API 现在更整洁、更清晰，同时也保留了与旧软件包的源兼容性。
-* 在 macOS 上，现在 Swift 软件包的构建发生在一个防止网络访问和文件系统修改的沙箱中，这有助于减轻恶意制作的 Manifest 配置文件的影响。
+* 在 macOS 上，现在 Swift 软件包的构建发生在一个防止网络访问和文件系统修改的沙箱中，这有助于减轻恶意制作的 manifest 配置文件的影响。
 
 此外，Swift 软件包管理器建立在 Swift 3.1（[SE-0159](https://github.com/apple/swift-evolution/blob/master/proposals/0152-package-manager-tools-version.md)）中引入的软件包管理器工具版本控制的基础上，该软件包允许软件包作者指定构建软件包所需的 Swift 版本——现在包括了 Swift 4。
 
@@ -92,7 +92,7 @@ Swift 4 为 Swift 软件包管理器引入了新的工作流功能和更完整�
 * [SE-0150 软件包管理器对分支的支持](https://github.com/apple/swift-evolution/blob/master/proposals/0150-package-manager-branch-support.md)
 * [SE-0158 软件包管理器的 Manifest 配置文件 API 重新设计](https://github.com/apple/swift-evolution/blob/master/proposals/0158-package-manager-manifest-api-redesign.md)
 * [SE-0162 软件包管理器的自定义目标布局](https://github.com/apple/swift-evolution/blob/master/proposals/0162-package-manager-custom-target-layouts.md)
-* [SE-0175 软件包管理器修订过的依赖解析](https://github.com/apple/swift-evolution/blob/master/proposals/0175-package-manager-revised-dependency-resolution.md)
+* [SE-0175 软件包管理器修订的依赖解析](https://github.com/apple/swift-evolution/blob/master/proposals/0175-package-manager-revised-dependency-resolution.md)
 * [SE-0179 Swift `run` 命令](https://github.com/apple/swift-evolution/blob/master/proposals/0179-swift-run-command.md)
 * [SE-0181 软件包管理器 C/C++ 语言标准支持](https://github.com/apple/swift-evolution/blob/master/proposals/0181-package-manager-cpp-language-version.md)
 
@@ -133,6 +133,6 @@ Swift 4.0 的开发是通过以下在 Github 上代码仓库的 swift-4.0-branch
 `swift-4.0-branch` 分支将继续开放——但在同样的发布管理过程下——以累积更改以用于在将来潜在的，作为漏洞修复的“点”版本发布。
 
 <br />
-<sub>Original article: [https://swift.org/blog/swift-4-0-released/](https://swift.org/blog/swift-4-0-released/)</sub>
+<sub>Original article: <a href="https://swift.org/blog/swift-4-0-released/">https://swift.org/blog/swift-4-0-released/</a></sub>
 
 <sup>Original article copyright © 2017 Apple Inc. All rights reserved. Swift and the Swift logo are trademarks of Apple Inc.</sup>
