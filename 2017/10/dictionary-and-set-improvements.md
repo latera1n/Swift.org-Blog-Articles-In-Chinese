@@ -43,7 +43,7 @@
 
 ## 根据键来分组值
 
-<img alt="从名称和值构建一个字典" src="https://swift.org/assets/images/dictionary-blog/grouping.png" srcset="https://swift.org/assets/images/dictionary-blog/grouping_2x.png 2x" style="float: right;">
+<img alt="从名称和值构建一个字典" src="https://swift.org/assets/images/dictionary-blog/grouping_2x.png" style="float: right;">
 
 一个新的分组初始化器使得从一系列值中构建一个字典，并按照从这些值计算的键分组变得很容易。我们将使用这个新的初始化器来构建按照其所属部门分组的杂货字典。
 
@@ -86,7 +86,7 @@
 
 ## 从键值对构建字典
 
-<img alt="按照杂货的所属部门分组" src="https://swift.org/assets/images/dictionary-blog/uniqueKeys.png" srcset="https://swift.org/assets/images/dictionary-blog/uniqueKeys_2x.png 2x" style="float: right;">
+<img alt="按照杂货的所属部门分组" src="https://swift.org/assets/images/dictionary-blog/uniqueKeys_2x.png" style="float: right;">
 
 现在，您可以使用两种不同的初始化器以从键值对的序列创建字典：一种用于其中只具有唯一的键的情况，另一种用于其中含有重复的键的情况。
 
@@ -158,7 +158,7 @@
 现在，您可以使用键和 `default` 参数作为为字典下标，而不必使用零合并运算符（`??`）将可选值转换为您需要的实际计数。如果找到该键，则忽略该默认值并返回其值，如果找不到该键，则查找该下标返回您提供的默认值。
 
 > ```swift
-> // 仍是一个香蕉:
+> // 仍是一根香蕉:
 > cart[🍌, default: 0]    // 1
 > // 且仍然没有虾:
 > cart[🍤, default: 0]    // 0
@@ -178,7 +178,7 @@
 
 ## 合并两个字典
 
-<img alt="合并两个购物车" src="https://swift.org/assets/images/dictionary-blog/merging.png" srcset="https://swift.org/assets/images/dictionary-blog/merging_2x.png 2x" style="float: right;">
+<img alt="合并两个购物车" src="https://swift.org/assets/images/dictionary-blog/merging_2x.png" style="float: right;">
 
 除了更容易的增量更改之外，使用将一个字典合并至另一个的方法，字典也使得批量更改变得更简单。
 
@@ -202,7 +202,7 @@
 
 除了自定义`keys` 和 `values` 的集合之外，所有这些更改都可以在 Swift 3.2 中找到。即使您还没有切换至使用 Swift 4.0，您仍然可以从今天可以开始就利用这些改进！
 
-您可以在[字典](https://developer.apple.com/documentation/swift/dictionary)和[集合](https://developer.apple.com/documentation/swift/set)文档中找到关于所有这些新功能的更多信息，或者阅读 Swift 演进提案中关于[自定义 `keys` 和 `values` 集合](https://github.com/apple/swift-evolution/blob/master/proposals/0154-dictionary-key-and-value-collections.md)以及[其他字典和集增强](https://github.com/apple/swift-evolution/blob/master/proposals/0165-dict.md)的这些新添加功能背后原理的更多信息。
+您可以在[字典](https://developer.apple.com/documentation/swift/dictionary)和[集合](https://developer.apple.com/documentation/swift/set)文档中找到关于所有这些新功能的更多信息，或者阅读 Swift 演进提案中关于[自定义 `keys` 和 `values` 集合](https://github.com/apple/swift-evolution/blob/master/proposals/0154-dictionary-key-and-value-collections.md)以及[其他字典与集合的增强](https://github.com/apple/swift-evolution/blob/master/proposals/0165-dict.md)的这些新添加功能背后原理的更多信息。
 
 <br />
 <sub>Original article: <a href="https://swift.org/blog/dictionary-and-set-improvements/">https://swift.org/blog/dictionary-and-set-improvements/</a></sub>
