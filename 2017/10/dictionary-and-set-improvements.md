@@ -43,7 +43,7 @@
 
 ## 根据键来分组值
 
-<img alt="从名称和值构建一个字典" src="https://swift.org/assets/images/dictionary-blog/grouping_2x.png" style="float: right;">
+<img alt="从名称和值构建一个字典" src="https://swift.org/assets/images/dictionary-blog/grouping_2x.png" width="228">
 
 一个新的分组初始化器使得从一系列值中构建一个字典，并按照从这些值计算的键分组变得很容易。我们将使用这个新的初始化器来构建按照其所属部门分组的杂货字典。
 
@@ -86,7 +86,7 @@
 
 ## 从键值对构建字典
 
-<img alt="按照杂货的所属部门分组" src="https://swift.org/assets/images/dictionary-blog/uniqueKeys_2x.png" style="float: right;">
+<img alt="按照杂货的所属部门分组" src="https://swift.org/assets/images/dictionary-blog/uniqueKeys_2x.png" width="328">
 
 现在，您可以使用两种不同的初始化器以从键值对的序列创建字典：一种用于其中只具有唯一的键的情况，另一种用于其中含有重复的键的情况。
 
@@ -178,7 +178,7 @@
 
 ## 合并两个字典
 
-<img alt="合并两个购物车" src="https://swift.org/assets/images/dictionary-blog/merging_2x.png" style="float: right;">
+<img alt="合并两个购物车" src="https://swift.org/assets/images/dictionary-blog/merging_2x.png" width="255">
 
 除了更容易的增量更改之外，使用将一个字典合并至另一个的方法，字典也使得批量更改变得更简单。
 
