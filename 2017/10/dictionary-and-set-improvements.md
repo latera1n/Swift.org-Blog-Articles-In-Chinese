@@ -181,7 +181,7 @@
 
 除了更容易的增量更改之外，使用将一个字典合并至另一个的方法，也使得批量更改变得更简单。
 
-要合并 `cart` 和其他字典的内容，可以使用变异的 `merge(_uniquingKeysWith:)` 方法。您传递的唯一化闭包的作用方式与在 `Dictionary(_uniquingKeysWith:)` 初始化程序中的闭包相同：只要有两个具有相同键的值，就会调用它，并返回一个值、另一个值或值的组合。
+要合并 `cart` 和其他字典的内容，可以使用变异的 `merge(_uniquingKeysWith:)` 方法。您传递的唯一化闭包的作用方式与在 `Dictionary(_uniquingKeysWith:)` 初始化器中的闭包相同：只要有两个具有相同键的值，就会调用它，并返回一个值、另一个值或值的组合。
 
 在此示例中，传递加法运算符作为 `uniquingKeysWith` 的参数，将所有匹配键的计数相加，以使更新后的购物车具有每个物品的正确总数：
 
@@ -191,15 +191,15 @@
 > // cart == [🍌: 5, 🍇: 3, 🍞: 1]
 > ```
 
-要使用合并的内容创建新字典而不是就地合并，请使用非变异的 `merge(_:uniquingKeysWith:)` 方法。
+要使用合并的内容创建一个新字典而不是就地合并，请使用非变异的 `merge(_:uniquingKeysWith:)` 方法。
 
 ## 而这并不是全部…
 
-还有一些我们没有涉及到的内容。字典现在具有新功能的自定义 `keys` 和 `values` 集合。`keys` 集合保持快速键查找，而可变的 `values` 集合可让您就地修改它们的值。
+还有一些我们没有涉及到的内容。字典现在具有新功能的自定义 `keys` 和 `values` 集合。`keys` 集合保持快速的键查找，而可变的 `values` 集合可让您就地修改它们的值。
 
-像字典一样，集合获得了一个新的 `filter(_:)` 方法，返回一组相同的类型，而不是像早期版本的 Swift 那样返回数组。而且终于，集合和字典现在都揭示了它们的当前容量并添加了一个 `reserveCapacity(_:)` 方法。有了这些添加的功能，您可以看到并控制其内部存储的大小。
+像字典一样，集合获得了一个新的 `filter(_:)` 方法，返回相同类型的一个集合，而不是像早期版本的 Swift 那样返回数组。并且终于，集合和字典现在都显露了它们的当前容量并添加了一个 `reserveCapacity(_:)` 方法。有了这些添加的功能，您可以看到并控制其内部存储的大小。
 
-除了自定义`keys` 和 `values` 的集合之外，所有这些更改都可以在 Swift 3.2 中找到。即使您还没有切换至使用 Swift 4.0，您仍然可以从今天可以开始就利用这些改进！
+除了自定义 `keys` 和 `values` 的集合之外，所有这些更改都可以在 Swift 3.2 中找到。即使您还没有切换至使用 Swift 4.0，您仍然可以从今天可以开始就利用这些改进！
 
 您可以在[字典](https://developer.apple.com/documentation/swift/dictionary)和[集合](https://developer.apple.com/documentation/swift/set)文档中找到关于所有这些新功能的更多信息，或者阅读 Swift 演进提案中关于[自定义 `keys` 和 `values` 集合](https://github.com/apple/swift-evolution/blob/master/proposals/0154-dictionary-key-and-value-collections.md)以及[其他字典与集合的增强](https://github.com/apple/swift-evolution/blob/master/proposals/0165-dict.md)的这些新添加功能背后原理的更多信息。
 
