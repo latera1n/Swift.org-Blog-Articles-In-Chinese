@@ -5,6 +5,11 @@ Swift.org blog articles in Chinese
 
 ### 2017
 
+##### 10 月
+* [Swift 4.0 中字典和集合的改进][dictionary-and-set-improvements] (10/4/2017)
+
+[dictionary-and-set-improvements]: ./2017/10/dictionary-and-set-improvements.md
+
 ##### 9 月
 * [Swift 4.0 现已发布！][swift-4-0-released] (9/19/2017)
 
