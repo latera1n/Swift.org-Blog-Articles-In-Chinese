@@ -6,11 +6,15 @@ Swift.org blog articles in Chinese
 ### 2017
 
 ##### 10 月
+
+* [Xcode 9.1 改进了致命错误的显示][xcode-9-1-improves-display-of-fatal-errors] (10/5/2017)
 * [Swift 4.0 中字典和集合的改进][dictionary-and-set-improvements] (10/4/2017)
 
+[xcode-9-1-improves-display-of-fatal-errors]: ./2017/10/xcode-9-1-improves-display-of-fatal-errors.md
 [dictionary-and-set-improvements]: ./2017/10/dictionary-and-set-improvements.md
 
 ##### 9 月
+
 * [Swift 4.0 现已发布！][swift-4-0-released] (9/19/2017)
 
 [swift-4-0-released]: ./2017/09/swift-4-0-released.md
